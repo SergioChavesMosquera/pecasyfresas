@@ -13,8 +13,6 @@ const SIZES = [
   { key:'xlarge', label:'XL', desc:'45 cm', factor: 3 },
 ];
 
-const PRICE_KEYS = ['small','medium','large','xlarge'];
-
 // Convierte "$35.000" a 35000
 function parsePrice(str) {
   if (!str) return 0;
