@@ -148,7 +148,7 @@ Vercel detecta Create React App automáticamente. No requiere configuración adi
 
 Este sitio fue desarrollado por **SerStack**.
 
-Si necesitas cambios, nuevas secciones, integraciones o cualquier mejora:
+Si necesitas soporte técnico, cambios, nuevas secciones, integraciones o cualquier mejora:
 
 | Canal | Contacto |
 |---|---|
