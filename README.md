@@ -1,75 +1,159 @@
-# Getting Started with Create React App
+# 🍕 Pizzería La Viña — Sitio Web Oficial
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> Sitio web de domicilios y carta digital para **Pizzería La Viña**, desarrollado por [SerStack](https://wa.me/573005023817).
 
-## Available Scripts
+---
 
-In the project directory, you can run: 
+## 🛠️ Tecnologías usadas
 
-### `npm start`
+| Tecnología | Uso |
+|---|---|
+| **React 18** (Create React App) | Framework principal del sitio |
+| **React Router DOM v6** | Navegación entre páginas (`/`, `/menu`, `/menu/:id`, `/arma`) |
+| **CSS Modules** | Estilos por componente, sin conflictos |
+| **Google Fonts** | Tipografías: `Oswald`, `Merriweather`, `Barlow` |
+| **SVG nativo** | Visualización interactiva de pizza en "Arma tu Pizza" |
+| **Vercel** | Deploy y hosting del sitio |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Sin librerías de UI externas — todo el diseño es CSS puro personalizado.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 📁 Estructura del proyecto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+src/
+├── components/          # Componentes reutilizables
+│   ├── Navbar.js/.css
+│   ├── Hero.js/.css
+│   ├── Historia.js/.css
+│   ├── Menu.js/.css       ← Vista previa del menú (máx. 8 productos)
+│   ├── Galeria.js/.css
+│   ├── Testimonios.js/.css
+│   ├── Pedido.js/.css
+│   ├── PizzaDetail.js/.css  ← Detalle individual con zoom y selector de tamaño
+│   ├── Footer.js/.css
+│   └── WhatsAppBtn.js/.css
+│
+├── pages/               # Páginas completas
+│   ├── Home.js          ← Landing page principal
+│   ├── MenuPage.js/.css ← Catálogo completo con filtros
+│   └── ArmaTuPizza.js/.css ← Constructor interactivo de pizza
+│
+├── data/
+│   └── pizzas.js        ← ⭐ ARCHIVO PRINCIPAL DE PRODUCTOS
+│
+└── App.js               # Router y estructura general
 
-### `npm run build`
+public/
+├── images/              # Todas las imágenes del sitio
+│   ├── logo-pizza.png
+│   ├── pizza-queso.webp
+│   ├── pizza-salami.jpg
+│   └── ...
+└── index.html           # Título y favicon de la pestaña
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ✏️ Cómo editar productos
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Todo el contenido del menú vive en un solo archivo:
 
-### `npm run eject`
+### `src/data/pizzas.js`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Cada producto sigue esta estructura:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```js
+{
+  id: 'nombre-unico',          // URL del producto: /menu/nombre-unico
+  nombre: 'Nombre visible',
+  categoria: 'Pizzas',         // Pizzas | Especiales | Hamburguesas | Perros | Asados | Bebidas
+  desc: 'Descripción corta.',
+  precios: {
+    small:  '$22.000',         // 28 cm
+    medium: '$30.000',         // 35 cm
+    large:  '$40.000',         // 40 cm
+    xlarge: '$55.000',         // 45 cm
+  },
+  emoji: '🍕',
+  imagen: '/images/pizza-queso.webp',  // Ruta desde public/
+}
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+> Para **hamburguesas, perros, asados y bebidas** (precio único), los campos `medium`, `large` y `xlarge` van como `null`:
+> ```js
+> precios: { small: '$20.000', medium: null, large: null, xlarge: null }
+> ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+> Para **gaseosas con variantes de sabor**, añade el campo `variantes`:
+> ```js
+> variantes: ['Coca-Cola', 'Pepsi', 'Sprite', 'Colombiana']
+> ```
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### ➕ Añadir un producto nuevo
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Abre `src/data/pizzas.js`
+2. Copia cualquier objeto existente de la categoría correcta
+3. Cambia `id`, `nombre`, `desc`, `precios` y `emoji`
+4. Sube la imagen a `public/images/` y actualiza `imagen`
+5. Guarda — aparece automáticamente en el menú, el catálogo y "Arma tu pizza"
 
-### Code Splitting
+### ✏️ Editar un producto existente
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Abre `src/data/pizzas.js`
+2. Encuentra el producto por su `id` o `nombre`
+3. Edita los campos que necesites
+4. Guarda
 
-### Analyzing the Bundle Size
+### 🗑️ Eliminar un producto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Abre `src/data/pizzas.js`
+2. Borra el objeto completo del producto (desde `{` hasta `},`)
+3. Guarda
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🖼️ Cómo añadir imágenes
 
-### Advanced Configuration
+1. Guarda la imagen en `public/images/`
+2. Nombres recomendados: `pizza-nombre.jpg` o `pizza-nombre.webp`
+3. En `pizzas.js` actualiza el campo `imagen`:
+   ```js
+   imagen: '/images/pizza-nombre.jpg'
+   ```
+4. Formatos recomendados: `.webp` (mejor rendimiento) o `.jpg`
+5. Tamaño ideal: **800x600px**, máximo 300KB por imagen
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 🌐 Deploy en Vercel
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+El sitio está desplegado en Vercel conectado al repositorio de GitHub. Cada `git push` a `main` actualiza el sitio automáticamente.
 
-### `npm run build` fails to minify
+```bash
+# Para desplegar cambios:
+git add .
+git commit -m "descripción del cambio"
+git push origin main
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Vercel detecta Create React App automáticamente. No requiere configuración adicional.
 
+---
 
-Diseñado por SerStack 
+## 📞 Contacto y soporte
 
-Contactanos en:
+Este sitio fue desarrollado por **SerStack**.
+
+Si necesitas cambios, nuevas secciones, integraciones o cualquier mejora:
+
+| Canal | Contacto |
+|---|---|
+| 💬 WhatsApp | [+57 300 502 3817](https://wa.me/573005023817) |
+| 📸 Instagram | [@ser_stack](https://instagram.com/ser_stack) |
+| 🌐 Web | [serstack.vercel.app](https://serstack.vercel.app) |
+
+> *"Sitios web que convierten visitas en clientes."*
