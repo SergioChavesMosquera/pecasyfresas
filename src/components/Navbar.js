@@ -42,6 +42,14 @@ export default function Navbar() {
       </div>
 
       <ul className={`nav__links ${open ? 'nav__links--open' : ''}`}>
+        
+        {/* NUEVO: Botón "Arma tu pizza" exclusivo para el menú móvil */}
+        <li className="nav__mobile-arma">
+          <Link to="/arma" className="btn-red" onClick={() => setOpen(false)}>
+            🍕 Arma tu pizza
+          </Link>
+        </li>
+
         {links.map(l => (
           <li key={l.label}>
             {l.isRoute ? (

@@ -20,4 +20,43 @@
 .testi__dots { display:flex; gap:0.5rem; margin-top:1.5rem; }
 .testi__dot { width:28px; height:2px; background:var(--border); border:none; cursor:pointer; transition:background 0.2s, width 0.2s; padding:0; }
 .testi__dot.active { background:var(--red); width:44px; }
-@media (max-width:900px) { .testi__inner { grid-template-columns:1fr; gap:3rem; } }
+@media (max-width: 900px) { 
+  .testi__inner { 
+    grid-template-columns: 1fr; 
+    gap: 3rem; 
+  } 
+  /* Centramos la información del lado izquierdo */
+  .testi__left {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Ajustes específicos para Celulares */
+@media (max-width: 480px) {
+  .testi { 
+    padding: 4rem 5%; /* Reducimos el espacio superior/inferior */
+  }
+  .testi__card { 
+    padding: 1.5rem; /* Menos padding interno para que quepa el texto */
+    margin: 0 0.5rem;
+  }
+  .testi__qmark { 
+    font-size: 3.5rem; /* Achicamos la comilla de fondo */
+    top: 0.5rem;
+    right: 1rem;
+  }
+  .testi__text { 
+    font-size: 0.85rem; /* Letra ligeramente más pequeña */
+    line-height: 1.6;
+  }
+  /* Ajustamos los puntitos de navegación para que no se salgan */
+  .testi__dots {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .testi__dot { width: 20px; }
+  .testi__dot.active { width: 30px; }
+}
