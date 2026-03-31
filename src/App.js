@@ -1,27 +1,25 @@
 import './App.css';
-import Navbar      from './components/Navbar';
-import Hero        from './components/Hero';
-import Historia    from './components/Historia';
-import Menu        from './components/Menu';
-import Galeria     from './components/Galeria';
-import Testimonios from './components/Testimonios';
-import Pedido      from './components/Pedido';
-import Footer      from './components/Footer';
 
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar      from './components/Navbar';
+import Footer      from './components/Footer';
+import WhatsAppBtn from './components/WhatsAppBtn';
+import Home        from './pages/Home';
+import MenuPage    from './pages/MenuPage';
+import PizzaDetail from './components/PizzaDetail';
 
 function App() {
   return (
-    <div className="App">
+    <BrowserRouter>
       <Navbar />
-      <Hero />
-      <Historia />
-      <Menu />
-      <Galeria />
-      <Testimonios />
-      <Pedido />
+      <Routes>
+        <Route path="/"           element={<Home />} />
+        <Route path="/menu"       element={<MenuPage />} />
+        <Route path="/menu/:id"   element={<PizzaDetail />} />
+      </Routes>
       <Footer />
-
-    </div>
+      <WhatsAppBtn />
+    </BrowserRouter>
   );
 }
 

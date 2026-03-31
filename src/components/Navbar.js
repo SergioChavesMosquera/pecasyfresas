@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-const WA = 'https://wa.me/573005023817?text=Hola!%20Quiero%20hacer%20un%20pedido%20a%20domicilio%20🍕';
+const WA = 'https://wa.me/573005023817?text=Hola!%20Quiero%20hacer%20un%20pedido%20a%20domicilio%20';
 
 const links = [
-  { label: 'Inicio',    href: '#inicio' },
-  { label: 'Historia',  href: '#historia' },
-  { label: 'Menú',      href: '#menu' },
-  { label: 'Galería',   href: '#galeria' },
-  { label: 'Reseñas',   href: '#testimonios' },
+  { label: 'Inicio',   href: '/#inicio',      isRoute: false },
+  { label: 'Historia', href: '/#historia',     isRoute: false },
+  { label: 'Menu',     href: '/menu',          isRoute: true  },
+  { label: 'Galeria',  href: '/#galeria',      isRoute: false },
+  { label: 'Resenas',  href: '/#testimonios',  isRoute: false },
 ];
 
 export default function Navbar() {
@@ -23,35 +24,58 @@ export default function Navbar() {
 
   return (
     <nav className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
-      {/* Barra tricolor */}
       <div className="nav__tricolor">
         <span className="tc-g" /><span className="tc-w" /><span className="tc-r" />
       </div>
 
-      <a href="#inicio" className="nav__logo">
-        <span className="nav__logo-pizza">🍕</span>
+      <Link to="/" className="nav__logo">
+        <img src="/images/logo-pizza.png" alt="Logo La Viña" className="nav__logo-pizza" />
         <div>
           <span className="nav__logo-main">LA VIÑA</span>
-          <span className="nav__logo-sub">Pizzería</span>
+          <span className="nav__logo-sub">Pizzeria</span>
         </div>
-      </a>
+      </Link>
 
       <ul className={`nav__links ${open ? 'nav__links--open' : ''}`}>
         {links.map(l => (
           <li key={l.label}>
-            <a href={l.href} className="nav__link" onClick={() => setOpen(false)}>
-              {l.label}
-            </a>
+            {l.isRoute ? (
+              <Link
+                to={l.href}
+                className="nav__link"
+                onClick={() => setOpen(false)}
+              >
+                {l.label}
+              </Link>
+            ) : (
+              <a
+                href={l.href}
+                className="nav__link"
+                onClick={() => setOpen(false)}
+              >
+                {l.label}
+              </a>
+            )}
           </li>
         ))}
         <li>
-          <a href={WA} className="btn-wa nav__cta" target="_blank" rel="noreferrer" onClick={() => setOpen(false)}>
-            🍕 Pedir ya
+          <a
+            href={WA}
+            className="btn-wa nav__cta"
+            target="_blank"
+            rel="noreferrer"
+            onClick={() => setOpen(false)}
+          >
+            Pedir ya
           </a>
         </li>
       </ul>
 
-      <button className={`nav__burger ${open ? 'open' : ''}`} onClick={() => setOpen(!open)} aria-label="menú">
+      <button
+        className={`nav__burger ${open ? 'open' : ''}`}
+        onClick={() => setOpen(!open)}
+        aria-label="menu"
+      >
         <span /><span /><span />
       </button>
     </nav>
