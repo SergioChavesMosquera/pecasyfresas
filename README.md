@@ -152,7 +152,7 @@ Si necesitas cambios, nuevas secciones, integraciones o cualquier mejora:
 
 | Canal | Contacto |
 |---|---|
-| 💬 WhatsApp | [+57 300 502 3817](https://wa.me/573005023817) |
+| 💬 WhatsApp | [+57 312 803 6725](https://wa.me/573128036725) |
 | 📸 Instagram | [@ser_stack](https://instagram.com/ser_stack) |
 | 🌐 Web | [serstack.vercel.app](https://serstack.vercel.app) |
 
