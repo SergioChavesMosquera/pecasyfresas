@@ -9,7 +9,7 @@ const links = [
   { label: 'Historia', href: '/#historia',     isRoute: false },
   { label: 'Menu',     href: '/menu',          isRoute: true  },
   { label: 'Galeria',  href: '/#galeria',      isRoute: false },
-  { label: 'Resenas',  href: '/#testimonios',  isRoute: false },
+  { label: 'Reseñas',  href: '/#testimonios',  isRoute: false },
 ];
 
 export default function Navbar() {

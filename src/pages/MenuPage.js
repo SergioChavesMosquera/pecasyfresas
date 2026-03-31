@@ -3,7 +3,10 @@ import { Link }     from 'react-router-dom';
 import { pizzas }   from '../data/pizzas';
 import './MenuPage.css';
 
-const cats = ['Todas', 'Clasicas', 'Especiales', 'Combos'];
+const cats = ['Todas', 'Pizzas', 'Especiales', 'Hamburguesas', 'Perros', 'Asados', 'Bebidas'];
+
+const getMinPrice = (p) => p.precios.small;
+const hasSizes    = (p) => p.precios.medium !== null;
 
 export default function MenuPage() {
   const [cat, setCat] = useState('Todas');
@@ -12,19 +15,19 @@ export default function MenuPage() {
   return (
     <div className="menupage">
       <div className="menupage__header">
-        <span className="tag">— Carta completa</span>
-        <h1 className="section-title">Nuestro <em>Menú</em></h1>
+        <span className="tag">- Carta completa</span>
+        <h1 className="section-title">Nuestro <em>Menu</em></h1>
         <div className="divider-italy"><span/><span/><span/></div>
       </div>
 
       <div className="menupage__layout">
         <aside className="menupage__filters">
-          <h3>Categorías</h3>
+          <h3>Categorias</h3>
           <ul>
             {cats.map(c => (
               <li key={c}>
                 <button
-                  className={`mfilter-btn ${cat === c ? 'active' : ''}`}
+                  className={cat === c ? 'mfilter-btn active' : 'mfilter-btn'}
                   onClick={() => setCat(c)}
                 >
                   {c}
@@ -47,7 +50,12 @@ export default function MenuPage() {
                 <span className="menupage__cat">{p.categoria}</span>
                 <h3>{p.nombre}</h3>
                 <p>{p.desc}</p>
-                <span className="menupage__price">{p.precio}</span>
+                <div className="menupage__price-wrap">
+                  {hasSizes(p) && (
+                    <span className="menupage__desde">desde </span>
+                  )}
+                  <span className="menupage__price">{getMinPrice(p)}</span>
+                </div>
               </div>
             </Link>
           ))}

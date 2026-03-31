@@ -1,18 +1,230 @@
-.pdetail { padding: 8rem 5%; background: var(--black); min-height: 100vh; }
-.pdetail__container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+.pdetail {
+  padding: 8rem 5%;
+  background: var(--black);
+  min-height: 100vh;
+}
+
+.pdetail__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
 .pdetail__img-col { position: sticky; top: 100px; }
-.pdetail__img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--radius); }
-.pdetail__emoji-big { width: 100%; aspect-ratio: 4/3; background: var(--surface); display: flex; align-items: center; justify-content: center; font-size: 8rem; border-radius: var(--radius); }
-.pdetail__breadcrumb { font-size: 0.7rem; letter-spacing: 0.12em; color: var(--muted); margin-bottom: 1.5rem; }
-.pdetail__breadcrumb a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+
+.pdetail__img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.pdetail__emoji-big {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8rem;
+  border-radius: var(--radius);
+}
+
+.pdetail__breadcrumb {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+.pdetail__breadcrumb a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
 .pdetail__breadcrumb a:hover { color: var(--red); }
-.pdetail__cat { font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); display: block; margin-bottom: 0.5rem; }
-.pdetail__nombre { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700; text-transform: uppercase; color: var(--white); line-height: 1; margin-bottom: 0.5rem; }
-.pdetail__precio { font-family: var(--font-display); font-size: 1.4rem; color: var(--green2); margin-bottom: 1rem; }
-.pdetail__detalle { font-family: var(--font-serif); font-size: 0.95rem; color: var(--muted); line-height: 1.85; margin-bottom: 2rem; }
-.pdetail__btn { width: 100%; justify-content: center; font-size: 1rem; padding: 1.1rem; margin-bottom: 1rem; }
-.pdetail__back { display: block; text-align: center; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+
+.pdetail__cat {
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--red);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.pdetail__nombre {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.pdetail__detalle {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.85;
+  margin-bottom: 2rem;
+}
+
+/* Selector de tamaños */
+.pdetail__sizes { margin-bottom: 2rem; }
+
+.pdetail__sizes-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+}
+
+.pdetail__sizes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.pdetail__size-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.75rem 0.5rem;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.pdetail__size-btn:hover {
+  border-color: var(--red);
+}
+.pdetail__size-btn.active {
+  border-color: var(--red);
+  background: var(--card);
+}
+
+.pdetail__size-letter {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1;
+}
+.pdetail__size-btn.active .pdetail__size-letter { color: var(--red); }
+
+.pdetail__size-cm {
+  font-size: 0.62rem;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+
+.pdetail__size-price {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  color: var(--green2);
+  font-weight: 600;
+}
+
+/* Precio seleccionado */
+.pdetail__price-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.pdetail__price-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.pdetail__precio {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--green2);
+  font-weight: 700;
+}
+
+.pdetail__btn {
+  width: 100%;
+  justify-content: center;
+  font-size: 1rem;
+  padding: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.pdetail__back {
+  display: block;
+  text-align: center;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
 .pdetail__back:hover { color: var(--white); }
-.pdetail__notfound { padding: 10rem 5%; text-align: center; }
-.pdetail__notfound a { color: var(--red); }
-@media (max-width: 900px) { .pdetail__container { grid-template-columns: 1fr; gap: 3rem; } .pdetail__img-col { position: static; } }
+
+.pdetail__notfound {
+  padding: 10rem 5%;
+  text-align: center;
+  min-height: 100vh;
+}
+.pdetail__notfound h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+.pdetail__notfound a { color: var(--red); text-decoration: none; }
+
+@media (max-width: 900px) {
+  .pdetail__container { grid-template-columns: 1fr; gap: 3rem; }
+  .pdetail__img-col { position: static; }
+}
+
+/* Selector de variantes (sabores) */
+.pdetail__variants { margin-bottom: 2rem; }
+
+.pdetail__variants-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pdetail__variant-btn {
+  padding: 0.5rem 1rem;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.pdetail__variant-btn:hover {
+  border-color: var(--red);
+  color: var(--white);
+}
+
+.pdetail__variant-btn.active {
+  background: var(--red);
+  border-color: var(--red);
+  color: var(--white);
+}
