@@ -32,7 +32,7 @@ export default function Navbar() {
         <Link to="/" className="nav__logo">
           <img src="/images/logo-pizza.png" alt="Logo La Vina" className="nav__logo-pizza" />
           <div>
-            <span className="nav__logo-main">LA VINA</span>
+            <span className="nav__logo-main">LA VIÑA</span>
             <span className="nav__logo-sub">Pizzeria</span>
           </div>
         </Link>
