@@ -14,17 +14,19 @@ export default function PizzaDetail() {
   const { id } = useParams();
   const pizza = pizzas.find(p => p.id === id);
 
-  const hasSizes    = pizza && pizza.precios.medium !== null;
-  const hasVariants = pizza && pizza.variantes && pizza.variantes.length > 0;
+  const hasSizes   = pizza && pizza.precios.medium !== null;
+  // Cambiamos 'variantes' por 'sabores' para que coincida con tu data
+  const hasSabores = pizza && pizza.sabores && pizza.sabores.length > 0;
 
-  const [size,    setSize]    = useState('medium');
-  const [variant, setVariant] = useState('');
+  const [size,  setSize]  = useState('medium');
+  const [sabor, setSabor] = useState('');
 
   useEffect(() => {
     window.scrollTo(0, 0);
     setSize('medium');
-    if (pizza && pizza.variantes) setVariant(pizza.variantes[0]);
-    else setVariant('');
+    // Seleccionamos el primer sabor por defecto si existen
+    if (pizza && pizza.sabores) setSabor(pizza.sabores[0]);
+    else setSabor('');
   }, [id, pizza]);
 
   if (!pizza) {
@@ -39,10 +41,11 @@ export default function PizzaDetail() {
   const selectedPrice = pizza.precios.small;
   const selectedSize  = SIZES.find(s => s.key === size);
 
-  const waMsg = hasVariants
-    ? `Hola! Quiero pedir ${pizza.nombre} - Sabor: ${variant} - Precio: ${selectedPrice}`
+  // Actualizamos el mensaje de WhatsApp para usar 'hasSabores' y 'sabor'
+  const waMsg = hasSabores
+    ? `Hola! Quiero pedir ${pizza.nombre} - Sabor: ${sabor} - Precio: ${selectedPrice}`
     : hasSizes
-      ? `Hola! Quiero pedir ${pizza.nombre} tamano ${selectedSize.label} (${selectedSize.desc}) - ${pizza.precios[size]}`
+      ? `Hola! Quiero pedir ${pizza.nombre} tamaño ${selectedSize.label} (${selectedSize.desc}) - ${pizza.precios[size]}`
       : `Hola! Quiero pedir ${pizza.nombre} - ${selectedPrice}`;
 
   const waUrl = `https://wa.me/573005023817?text=${encodeURIComponent(waMsg)}`;
@@ -76,7 +79,7 @@ export default function PizzaDetail() {
           {/* Selector de tamaños — solo para pizzas */}
           {hasSizes && (
             <div className="pdetail__sizes">
-              <div className="pdetail__sizes-label">Elige el tamano:</div>
+              <div className="pdetail__sizes-label">Elige el tamaño:</div>
               <div className="pdetail__sizes-grid">
                 {SIZES.map(s => (
                   <button
@@ -93,18 +96,18 @@ export default function PizzaDetail() {
             </div>
           )}
 
-          {/* Selector de variantes — para gaseosas */}
-          {hasVariants && (
+          {/* Selector de sabores — para gaseosas */}
+          {hasSabores && (
             <div className="pdetail__variants">
               <div className="pdetail__sizes-label">Elige el sabor:</div>
               <div className="pdetail__variants-grid">
-                {pizza.variantes.map(v => (
+                {pizza.sabores.map(s => (
                   <button
-                    key={v}
-                    className={`pdetail__variant-btn ${variant === v ? 'active' : ''}`}
-                    onClick={() => setVariant(v)}
+                    key={s}
+                    className={`pdetail__variant-btn ${sabor === s ? 'active' : ''}`}
+                    onClick={() => setSabor(s)}
                   >
-                    {v}
+                    {s}
                   </button>
                 ))}
               </div>
@@ -120,7 +123,7 @@ export default function PizzaDetail() {
             Pedir por WhatsApp
           </a>
 
-          <Link to="/menu" className="pdetail__back">Ver mas productos</Link>
+          <Link to="/menu" className="pdetail__back">Ver más productos</Link>
         </div>
 
       </div>

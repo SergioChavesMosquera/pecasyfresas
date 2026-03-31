@@ -36,9 +36,9 @@ export default function Menu() {
             </div>
             <p className="menu__card-desc">{item.desc}</p>
             <div className="menu__card-sizes">
-              <span>S</span><span>M</span><span>L</span><span>XL</span>
+              <span>S  -  </span><span>M  -  </span><span>L  -  </span><span>XL  </span>
             </div>
-            <div className="menu__card-cta">Ver tamanios y pedir</div>
+            <div className="menu__card-cta">Ver tamaños y pedir</div>
           </div>
         </Link>
       );

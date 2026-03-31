@@ -1,59 +1,150 @@
+/* =========================================
+   HISTORIA - CORRECCIÓN DE ESTRUCTURA Y TAMAÑOS
+   ========================================= */
+
 .hist {
-  padding: 8rem 5%; background: var(--dark);
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 6rem; align-items: center;
-  position: relative; overflow: hidden;
-}
-.hist::before {
-  content: ''; position: absolute; top:0; left:0; right:0;
-  height: 1px;
-  background: linear-gradient(90deg, var(--green2), var(--white), var(--red));
+  padding: 8rem 5%;
+  background: var(--black);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+  position: relative;
 }
 
-.hist__img-col { position: relative; }
-.hist__img-main { aspect-ratio: 4/5; border-radius: var(--radius); overflow: hidden; }
-.hist__img-main img, .hist__placeholder {
-  width: 100%; height: 100%; object-fit: cover; display: block;
+/* 1. COLUMNA DE IMÁGENES (EL LADO "RARO") */
+.hist__img-col {
+  position: relative;
+  display: block; /* Volvemos a bloque para control total de hijos */
+  width: 100%;
 }
-.hist__placeholder {
-  background: var(--surface);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 4rem;
+
+/* La Pizza Grande */
+.hist__img-main {
+  width: 90%; /* Dejamos un 10% de aire para que el logo sobresalga */
+  aspect-ratio: 4/5;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.1);
 }
+
+.hist__img-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Esto evita que la pizza se estire */
+}
+
+/* El Logo / Foto Secundaria (Arreglado) */
 .hist__img-sec {
-  position: absolute; bottom: -1.5rem; right: -2rem;
-  width: 52%; aspect-ratio: 1;
-  border-radius: var(--radius); overflow: hidden;
-  border: 4px solid var(--dark); box-shadow: var(--shadow-lg);
+  position: absolute;
+  bottom: -20px; /* Cuelga un poco hacia afuera de la pizza */
+  right: 0;      /* Pegado al borde derecho del contenedor */
+  width: 180px;  /* Tamaño fijo profesional */
+  height: 180px; /* Cuadrado perfecto */
+  z-index: 5;
+  background: var(--dark);
+  border: 8px solid var(--black); /* El "marco" que lo integra al diseño dark */
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
 }
-.hist__placeholder--sm { font-size: 2.5rem; }
+
+.hist__img-sec img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Cambiado a contain si es un logo, o cover si es foto */
+  padding: 10px;       /* Aire interno para el logo */
+}
+
+/* El Badge de 30+ Años (Menos invasivo) */
 .hist__years {
-  position: absolute; top: 2rem; left: -1.5rem;
-  background: var(--red); border-radius: var(--radius);
-  padding: 1rem 1.25rem; text-align: center;
-  box-shadow: 0 8px 24px var(--red-glow);
-  animation: float 5s ease-in-out infinite;
+  position: absolute;
+  top: 30px;
+  left: -25px; /* Sobresale hacia la izquierda */
+  background: var(--red);
+  padding: 1.2rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+  z-index: 10;
+  box-shadow: 10px 10px 30px rgba(231, 76, 60, 0.3);
+  animation: float 4s ease-in-out infinite;
+  height: auto; /* IMPORTANTE: Para que no sea un rectángulo largo */
 }
+
 .hist__years-num {
-  font-family: var(--font-display); font-size: 2rem;
-  font-weight: 700; color: var(--white); line-height: 1; display: block;
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: white;
+  line-height: 1;
 }
-.hist__years-label { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.75); line-height: 1.4; }
 
-.hist__pillars { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+.hist__years-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.9);
+  margin-top: 5px;
+  display: block;
+}
+
+/* 2. PILARES DE LA DERECHA (Masa, Tomate, Moto) */
+.hist__pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
 .hist__pillar {
-  display: flex; align-items: flex-start; gap: 1rem;
-  padding: 1rem 1.25rem; background: var(--surface);
-  border-radius: var(--radius); border-left: 3px solid var(--red);
-  transition: transform var(--transition);
+  display: flex;
+  align-items: center; /* Alineación vertical perfecta */
+  gap: 1.2rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03); /* Fondo sutil para no verse "pesado" */
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: 0.3s ease;
 }
-.hist__pillar:hover { transform: translateX(5px); }
-.hist__pillar-icon { font-size: 1.4rem; flex-shrink: 0; }
-.hist__pillar-title { font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; color: var(--white); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.15rem; }
-.hist__pillar-desc { font-size: 0.82rem; color: var(--muted); }
 
+.hist__pillar:hover {
+  transform: translateX(10px);
+  border-color: var(--red);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.hist__pillar-img-icon {
+  width: 60px;
+  height: 60px;
+  min-width: 60px; /* Evita que se aplaste */
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.hist__pillar-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.hist__pillar-desc {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+/* Animación de flotado */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Ajuste móvil */
 @media (max-width: 900px) {
   .hist { grid-template-columns: 1fr; gap: 4rem; }
-  .hist__img-col { max-width: 380px; margin: 0 auto; width: 100%; }
-  .hist__img-sec { right: -1rem; }
+  .hist__img-col { max-width: 400px; margin: 0 auto; }
+  .hist__img-sec { width: 140px; height: 140px; right: -10px; }
 }

@@ -14,8 +14,8 @@ export default function Hero() {
 
       <div className="hero__content">
         <div className="hero__badge au d1">
-          <span className="hero__badge-flag">IT</span>
-          Mas de 30 anos de sabor y tradicion
+          <span className="hero__badge-flag">🍕</span>
+          Mas de 30 años de sabor y tradicion
         </div>
 
         <h1 className="hero__title au d2">
@@ -25,10 +25,10 @@ export default function Hero() {
         </h1>
 
         <p className="hero__sub au d3">
-          Pizzeria La Vina - sabor autentico, masa artesanal y los mejores ingredientes.
-          Domicilios disponibles ahora mismo.
+          Pizzeria La Viña - sabor auténtico, masa artesanal <br />
+          y los mejores ingredientes. <br />
+          <span>Domicilios disponibles ahora mismo.</span>
         </p>
-
         <div className="hero__actions au d4">
           <a
             href={WA}
@@ -45,9 +45,9 @@ export default function Hero() {
 
         <div className="hero__stats au d5">
           {[
-            ['30+', 'Anos de tradicion'],
+            ['30+', 'Años de tradicion'],
             ['4.8', 'Calificacion'],
-            ['Rapido', 'Domicilios'],
+            ['Rapidos', 'Domicilios'],
             ['Artesanal', 'Masa propia']
           ].map(([num, label]) => (
             <div className="hero__stat" key={label}>
@@ -58,7 +58,14 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="hero__slice au d3">pizza</div>
+      {/* Aquí quitamos el texto y ponemos la imagen */}
+      <div className="hero__visual au d3">
+        <img 
+          src="/images/pizza-hero.jpg" 
+          alt="Pizza artesanal" 
+          className="hero__main-img" 
+        />
+      </div>
     </section>
   );
 }

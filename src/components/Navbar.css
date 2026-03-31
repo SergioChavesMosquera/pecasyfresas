@@ -11,7 +11,6 @@
   border-bottom: 1px solid var(--border);
 }
 
-/* Barra tricolor top */
 .nav__tricolor {
   position: absolute; top: 0; left: 0; right: 0;
   height: 3px; display: flex;
@@ -19,6 +18,13 @@
 .tc-g { flex:1; background: var(--green2); }
 .tc-w { flex:1; background: var(--white); }
 .tc-r { flex:1; background: var(--red); }
+
+/* Logo + arma tu pizza agrupados a la izquierda */
+.nav__left {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
 
 .nav__logo {
   display: flex; align-items: center; gap: 0.6rem;
@@ -40,6 +46,27 @@
   font-size: 0.6rem; letter-spacing: 0.25em;
   text-transform: uppercase; color: var(--red);
   display: block;
+}
+
+/* Boton arma tu pizza */
+.nav__arma-btn {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--red);
+  text-decoration: none;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  box-shadow: 0 2px 12px var(--red-glow);
+  transition: background 0.2s, transform 0.2s;
+}
+.nav__arma-btn:hover {
+  background: var(--red2);
+  transform: translateY(-1px);
 }
 
 .nav__links {
@@ -78,6 +105,7 @@
 .nav__burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 @media (max-width: 900px) {
+  .nav__arma-btn { display: none; }
   .nav__burger { display: flex; }
   .nav__links {
     position: fixed; top: 0; right: -100%; height: 100vh;

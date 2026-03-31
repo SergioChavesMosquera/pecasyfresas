@@ -28,44 +28,35 @@ export default function Navbar() {
         <span className="tc-g" /><span className="tc-w" /><span className="tc-r" />
       </div>
 
-      <Link to="/" className="nav__logo">
-        <img src="/images/logo-pizza.png" alt="Logo La Viña" className="nav__logo-pizza" />
-        <div>
-          <span className="nav__logo-main">LA VIÑA</span>
-          <span className="nav__logo-sub">Pizzeria</span>
-        </div>
-      </Link>
+      <div className="nav__left">
+        <Link to="/" className="nav__logo">
+          <img src="/images/logo-pizza.png" alt="Logo La Vina" className="nav__logo-pizza" />
+          <div>
+            <span className="nav__logo-main">LA VINA</span>
+            <span className="nav__logo-sub">Pizzeria</span>
+          </div>
+        </Link>
+        <Link to="/arma" className="nav__arma-btn">
+          🍕 Arma tu pizza
+        </Link>
+      </div>
 
       <ul className={`nav__links ${open ? 'nav__links--open' : ''}`}>
         {links.map(l => (
           <li key={l.label}>
             {l.isRoute ? (
-              <Link
-                to={l.href}
-                className="nav__link"
-                onClick={() => setOpen(false)}
-              >
+              <Link to={l.href} className="nav__link" onClick={() => setOpen(false)}>
                 {l.label}
               </Link>
             ) : (
-              <a
-                href={l.href}
-                className="nav__link"
-                onClick={() => setOpen(false)}
-              >
+              <a href={l.href} className="nav__link" onClick={() => setOpen(false)}>
                 {l.label}
               </a>
             )}
           </li>
         ))}
         <li>
-          <a
-            href={WA}
-            className="btn-wa nav__cta"
-            target="_blank"
-            rel="noreferrer"
-            onClick={() => setOpen(false)}
-          >
+          <a href={WA} className="btn-wa nav__cta" target="_blank" rel="noreferrer" onClick={() => setOpen(false)}>
             Pedir ya
           </a>
         </li>
