@@ -1,0 +1,23 @@
+.testi { padding: 8rem 5%; background: var(--black); position:relative; }
+.testi::before { content:''; position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(90deg,transparent,var(--green2),transparent); }
+.testi__inner { display:grid; grid-template-columns:1fr 1.4fr; gap:6rem; align-items:center; }
+.testi__rating { display:flex; align-items:center; gap:1rem; margin:1.5rem 0 2rem; }
+.testi__big { font-family:var(--font-display); font-size:3.5rem; font-weight:700; color:var(--red); line-height:1; }
+.testi__stars { color:var(--gold); font-size:1rem; letter-spacing:0.1em; }
+.testi__rlabel { font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-top:0.2rem; }
+.testi__controls { display:flex; align-items:center; gap:1rem; }
+.testi__btn { width:42px; height:42px; border:1px solid var(--border); background:none; color:var(--white); font-size:1rem; cursor:pointer; border-radius:var(--radius); transition:background 0.2s, border-color 0.2s; }
+.testi__btn:hover { background:var(--red); border-color:var(--red); }
+.testi__counter { font-family:var(--font-display); color:var(--muted); font-size:0.9rem; }
+.testi__card { background:var(--surface); border:1px solid var(--border); padding:2.5rem; border-radius:var(--radius); position:relative; animation:fadeUp 0.45s both; }
+.testi__qmark { position:absolute; top:1rem; right:1.5rem; font-family:var(--font-display); font-size:6rem; color:var(--red); opacity:0.1; line-height:1; }
+.testi__stars2 { color:var(--gold); font-size:1rem; margin-bottom:1rem; letter-spacing:0.1em; }
+.testi__text { font-family:var(--font-serif); font-size:0.95rem; font-style:italic; color:rgba(255,255,255,0.8); line-height:1.85; margin-bottom:1.5rem; }
+.testi__author { display:flex; align-items:center; gap:0.75rem; }
+.testi__avatar { width:44px; height:44px; border-radius:50%; background:var(--red); color:var(--white); font-family:var(--font-display); font-size:1.2rem; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.testi__name { font-family:var(--font-display); font-size:0.9rem; color:var(--white); text-transform:uppercase; letter-spacing:0.08em; }
+.testi__meta { font-size:0.7rem; color:var(--muted); }
+.testi__dots { display:flex; gap:0.5rem; margin-top:1.5rem; }
+.testi__dot { width:28px; height:2px; background:var(--border); border:none; cursor:pointer; transition:background 0.2s, width 0.2s; padding:0; }
+.testi__dot.active { background:var(--red); width:44px; }
+@media (max-width:900px) { .testi__inner { grid-template-columns:1fr; gap:3rem; } }

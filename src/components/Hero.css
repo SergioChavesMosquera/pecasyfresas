@@ -1,0 +1,97 @@
+.hero {
+  position: relative; min-height: 100vh;
+  display: flex; align-items: center;
+  padding: 0 5%; overflow: hidden;
+}
+
+.hero__bg { position: absolute; inset: 0; z-index: 0; }
+.hero__bg-img {
+  width: 100%; height: 100%;
+  background: linear-gradient(135deg, #1a0000 0%, #2d0808 30%, #0d1a0d 65%, #080808 100%);
+  background-size: cover; background-position: center;
+  /* Reemplaza con: background-image: url('/images/hero.jpg'); */
+}
+.hero__overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(110deg, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.6) 55%, rgba(0,0,0,0.2) 100%);
+}
+.hero__pattern {
+  position: absolute; inset: 0;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 40px,
+    rgba(204,31,31,0.03) 40px,
+    rgba(204,31,31,0.03) 41px
+  );
+}
+
+.hero__content { position: relative; z-index: 1; max-width: 680px; padding-top: 5rem; }
+
+.hero__badge {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(8px);
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.68rem; font-weight: 500;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 1.5rem;
+}
+.hero__badge-flag { font-size: 1rem; }
+
+.hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 9vw, 6.5rem);
+  font-weight: 700; text-transform: uppercase;
+  color: var(--white); line-height: 0.95;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+.hero__title em { font-style: normal; color: var(--red); }
+.hero__title-green { color: var(--green2); display: block; }
+
+.hero__sub {
+  font-family: var(--font-serif);
+  font-size: 1rem; color: rgba(255,255,255,0.65);
+  line-height: 1.8; margin-bottom: 2.25rem;
+}
+
+.hero__actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
+
+.hero__stats {
+  display: flex; gap: 0; flex-wrap: wrap;
+  border: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+  background: rgba(255,255,255,0.04);
+  width: fit-content;
+}
+.hero__stat {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 0.1rem; padding: 0.85rem 1.3rem;
+  border-right: 1px solid var(--border);
+}
+.hero__stat:last-child { border-right: none; }
+.hero__stat-icon { font-size: 1.1rem; }
+.hero__stat-num {
+  font-family: var(--font-display);
+  font-size: 1.1rem; color: var(--red); font-weight: 700; line-height: 1;
+}
+.hero__stat-label { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+
+/* Pizza decorativa flotante */
+.hero__slice {
+  position: absolute; right: 8%; top: 50%;
+  transform: translateY(-50%);
+  font-size: clamp(8rem, 20vw, 18rem);
+  opacity: 0.12; z-index: 1;
+  animation: float 5s ease-in-out infinite;
+  pointer-events: none; user-select: none;
+}
+
+@media (max-width: 900px) {
+  .hero__slice { display: none; }
+  .hero__stats { justify-content: center; width: 100%; }
+}
