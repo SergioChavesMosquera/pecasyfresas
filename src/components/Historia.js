@@ -30,10 +30,10 @@ export default function Historia() {
         <div className="divider-italy"><span/><span/><span/></div>
         
         <p className="section-sub">
-          Pizzería La Viña nació de la pasión por la auténtica pizza italiana. Desde nuestros inicios hemos mantenido la misma receta artesanal, la misma masa de siempre y los ingredientes más frescos del mercado.
+          Pizzería La Viña nació en los 90 como un <strong>sitio emblemático de Barranquilla</strong>. Recordada por todos en nuestra antigua ubicación de la <strong>Cra 14 esquina</strong>, donde crecimos junto a nuestra comunidad.
         </p>
         <p className="section-sub" style={{marginTop:'1rem'}}>
-          Tres décadas sirviendo a nuestros clientes con amor, calidad y el sabor que ya se convirtió en tradición familiar en nuestra comunidad.
+          ¡Hoy estamos de vuelta! Manteniendo la misma receta artesanal y el sabor que nos hizo grandes, ahora nos encuentras en el <strong>Barrio La Victoria (Cra 14 #44-19)</strong>. Tres décadas después, seguimos sirviendo con el amor y la calidad de siempre.
         </p>
 
         <div className="hist__pillars">
@@ -43,7 +43,6 @@ export default function Historia() {
             { icon:'/images/domicilio.jpg', t:'Domicilios rápidos',    d:'Llevamos tu pizza caliente directamente a tu puerta.' },
           ].map(p => (
             <div className="hist__pillar" key={p.t}>
-              {/* Aquí cambiamos el span del emoji por una etiqueta img */}
               <img src={p.icon} alt={p.t} className="hist__pillar-img-icon" />
               <div>
                 <div className="hist__pillar-title">{p.t}</div>
