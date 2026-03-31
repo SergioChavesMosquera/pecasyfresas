@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "La Viña",
+  "name": "Pizzería La Viña",
+  "description": "Sabor auténtico y masa artesanal desde 1994",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,18 +9,20 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "images/logo-pizza.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any"
     },
     {
-      "src": "logo512.png",
+      "src": "images/logo-pizza.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "maskable"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#cc1f1f",
+  "background_color": "#0a0a0a"
 }
