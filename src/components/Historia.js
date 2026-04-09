@@ -1,49 +1,68 @@
+// historia.js
 import './Historia.css';
 
 export default function Historia() {
   return (
     <section className="hist" id="historia">
       <div className="hist__img-col">
-        {/* Imagen Principal */}
+        {/* Imagen Principal - Ambiente de café con plantas (Vivero) */}
         <div className="hist__img-main">
-          <img src="/images/historia-pizza.jpg" alt="Pizzería La Viña" />
+          <img 
+            src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/0c/a6/d8/un-interior-con-encanto.jpg?w=1100&h=1100&s=1" 
+            alt="Pecas y Fresas Pastelería Ambiente" 
+          />
         </div>
         
-        {/* Imagen Secundaria (más pequeña) */}
+        {/* Imagen Secundaria - Usando el logo circular de Instagram que pasaste */}
         <div className="hist__img-sec">
-          <img src="/images/logo-pizza.png" alt="Pizza artesanal" />
+          <img 
+            src="https://images.rappi.com/restaurants_logo/logo-1739639838607.png?e=webp&d=10x10&q=10"
+            alt="Logo Pecas y Fresas" 
+          />
         </div>
 
         <div className="hist__years">
-          <span className="hist__years-num">30+</span>
-          <span className="hist__years-label">Años de<br />tradición</span>
+          <span className="hist__years-num">40K</span>
+          <span className="hist__years-label">Seguidores<br />en redes</span>
         </div>
       </div>
 
       <div className="hist__content">
-        <span className="tag">— Nuestra historia</span>
+        <span className="tag">— Nuestra esencia</span>
         <h2 className="section-title">
-          Más de 30 años<br />
-          de <em>sabor</em> y<br />
-          <span className="green">tradición</span>
+          Un rincón<br />
+          mágico que<br />
+          <span className="green">enamora</span>
         </h2>
-        <div className="divider-italy"><span/><span/><span/></div>
+        <div className="divider-pastry"><span/><span/><span/></div>
         
         <p className="section-sub">
-          Pizzería La Viña nació en los 90 como un <strong>sitio emblemático de Barranquilla</strong>. Recordada por todos en nuestra antigua ubicación de la <strong>Cra 14 esquina</strong>, donde crecimos junto a nuestra comunidad.
+          <strong>Pecas y Fresas</strong> es más que una pastelería; es un refugio artesanal en el corazón de Bogotá. Nos especializamos en crear espacios <strong>extremadamente instagrameables</strong> donde cada detalle está pensado para acompañar un momento dulce.
         </p>
         <p className="section-sub" style={{marginTop:'1rem'}}>
-          ¡Hoy estamos de vuelta! Manteniendo la misma receta artesanal y el sabor que nos hizo grandes, ahora nos encuentras en el <strong>Barrio La Victoria (Cra 14 #44-19)</strong>. Tres décadas después, seguimos sirviendo con el amor y la calidad de siempre.
+          Desde nuestras famosas galletas y tortas personalizadas hasta nuestro café de especialidad, mantenemos una técnica <strong>100% artesanal</strong>. Te invitamos a descubrir nuestras sedes en <strong>Galerías, Cedritos y La Candelaria</strong>.
         </p>
 
         <div className="hist__pillars">
           {[
-            { icon:'/images/masa-artesanal.jpeg', t:'Masa artesanal',     d:'Preparada a diario con nuestra receta original de siempre.' },
-            { icon:'/images/ingredientes-frescos.jpg', t:'Ingredientes frescos',  d:'Seleccionamos los mejores tomates, quesos y embutidos.' },
-            { icon:'/images/domicilio.jpg', t:'Domicilios rápidos',    d:'Llevamos tu pizza caliente directamente a tu puerta.' },
+            { 
+              icon:'https://images.pexels.com/photos/205961/pexels-photo-205961.jpeg', 
+              t:'Repostería Creativa', 
+              d:'Postres únicos con un diseño visual increíble y sabor artesanal.' 
+            },
+            { 
+              icon:'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg', 
+              t:'Café & Vivero', 
+              d:'Más que café, un oasis urbano rodeado de naturaleza y frescura.' 
+            },
+            { 
+              icon:'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg', 
+              t:'Pet Friendly', 
+              d:'Tus compañeros de cuatro patas son siempre bienvenidos en casa.' 
+            },
           ].map(p => (
             <div className="hist__pillar" key={p.t}>
-              <img src={p.icon} alt={p.t} className="hist__pillar-img-icon" />
+              <img src={p.icon} alt={p.t} className="hist__pillar-img-icon" style={{objectFit: 'cover', borderRadius: '50%'}} />
               <div>
                 <div className="hist__pillar-title">{p.t}</div>
                 <div className="hist__pillar-desc">{p.d}</div>

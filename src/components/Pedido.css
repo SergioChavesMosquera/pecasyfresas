@@ -1,14 +1,110 @@
-.pedido { padding:8rem 5%; background:var(--dark); position:relative; overflow:hidden; text-align:center; }
-.pedido__bg { position:absolute; inset:0; background:radial-gradient(ellipse 80% 60% at 50% 50%, rgba(204,31,31,0.08), transparent 70%); pointer-events:none; }
-.pedido__emoji { font-size:4rem; display:block; margin-bottom:1rem; animation:float 4s ease-in-out infinite; }
-.pedido__title { font-family:var(--font-display); font-size:clamp(3rem,8vw,6rem); font-weight:700; text-transform:uppercase; color:var(--white); line-height:0.95; margin:0.5rem 0 1.5rem; }
-.pedido__title em { color:var(--red); font-style:normal; }
-.pedido__sub { font-family:var(--font-serif); font-size:1rem; color:var(--muted); line-height:1.8; max-width:500px; margin:0 auto 2.5rem; }
-.pedido__steps { display:flex; justify-content:center; gap:2rem; flex-wrap:wrap; margin-bottom:2.5rem; }
-.pedido__step { display:flex; align-items:center; gap:0.75rem; }
-.pedido__step-num { width:36px; height:36px; border-radius:50%; background:var(--red); color:var(--white); font-family:var(--font-display); font-size:1rem; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-.pedido__step-label { font-size:0.82rem; font-weight:500; color:rgba(255,255,255,0.75); }
-.pedido__btn { font-size:1rem; padding:1.1rem 2.8rem; }
-.pedido__phone { margin-top:1.5rem; font-size:0.82rem; color:var(--muted); }
-.pedido__phone a { color:var(--green2); text-decoration:none; font-weight:500; }
-.pedido__phone a:hover { text-decoration:underline; }
+/* Pedido.css */
+
+.pedido { 
+  padding: 8rem 5%; 
+  background: var(--dark); 
+  position: relative; 
+  overflow: hidden; 
+  text-align: center; 
+}
+
+.pedido__bg { 
+  position: absolute; 
+  inset: 0; 
+  /* Gradiente radial usando el rojo fresa de la marca */
+  background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(220, 53, 69, 0.08), transparent 70%); 
+  pointer-events: none; 
+}
+
+.pedido__emoji { 
+  font-size: 4rem; 
+  display: block; 
+  margin-bottom: 1rem; 
+  animation: float 4s ease-in-out infinite; 
+}
+
+.pedido__title { 
+  font-family: var(--font-display); 
+  font-size: clamp(3rem, 8vw, 6rem); 
+  font-weight: 700; 
+  text-transform: uppercase; 
+  color: var(--white); 
+  line-height: 0.95; 
+  margin: 0.5rem 0 1.5rem; 
+}
+
+.pedido__title em { 
+  color: #dc3545; 
+  font-style: normal; 
+}
+
+.pedido__sub { 
+  font-family: var(--font-serif); 
+  font-size: 1rem; 
+  color: var(--muted); 
+  line-height: 1.8; 
+  max-width: 500px; 
+  margin: 0 auto 2.5rem; 
+}
+
+.pedido__steps { 
+  display: flex; 
+  justify-content: center; 
+  gap: 2rem; 
+  flex-wrap: wrap; 
+  margin-bottom: 2.5rem; 
+}
+
+.pedido__step { 
+  display: flex; 
+  align-items: center; 
+  gap: 0.75rem; 
+}
+
+.pedido__step-num { 
+  width: 36px; 
+  height: 36px; 
+  border-radius: 50%; 
+  background: #dc3545; 
+  color: var(--white); 
+  font-family: var(--font-display); 
+  font-size: 1rem; 
+  font-weight: 700; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  flex-shrink: 0; 
+}
+
+.pedido__step-label { 
+  font-size: 0.82rem; 
+  font-weight: 500; 
+  color: rgba(255, 255, 255, 0.75); 
+}
+
+.pedido__btn { 
+  font-size: 1rem; 
+  padding: 1.1rem 2.8rem; 
+}
+
+.pedido__phone { 
+  margin-top: 1.5rem; 
+  font-size: 0.82rem; 
+  color: var(--muted); 
+}
+
+.pedido__phone a { 
+  color: #a8d5ba; /* Verde menta para el número de contacto */
+  text-decoration: none; 
+  font-weight: 500; 
+  transition: color 0.3s ease;
+}
+
+.pedido__phone a:hover { 
+  color: var(--white);
+  text-decoration: underline; 
+}
+
+@media (max-width: 600px) {
+  .pedido__steps { flex-direction: column; align-items: center; gap: 1rem; }
+}

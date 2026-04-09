@@ -1,5 +1,7 @@
+/* historia.css */
+
 /* =========================================
-   HISTORIA - CORRECCIÓN DE ESTRUCTURA Y TAMAÑOS
+   HISTORIA - ADAPTACIÓN PECAS Y FRESAS
    ========================================= */
 
 .hist {
@@ -12,16 +14,16 @@
   position: relative;
 }
 
-/* 1. COLUMNA DE IMÁGENES (EL LADO "RARO") */
+/* 1. COLUMNA DE IMÁGENES */
 .hist__img-col {
   position: relative;
-  display: block; /* Volvemos a bloque para control total de hijos */
+  display: block; 
   width: 100%;
 }
 
-/* La Pizza Grande */
+/* Imagen Principal */
 .hist__img-main {
-  width: 90%; /* Dejamos un 10% de aire para que el logo sobresalga */
+  width: 90%; 
   aspect-ratio: 4/5;
   border-radius: 20px;
   overflow: hidden;
@@ -32,20 +34,20 @@
 .hist__img-main img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Esto evita que la pizza se estire */
+  object-fit: cover; 
 }
 
-/* El Logo / Foto Secundaria (Arreglado) */
+/* El Logo Circular (Basado en la estética de la marca) */
 .hist__img-sec {
   position: absolute;
-  bottom: -20px; /* Cuelga un poco hacia afuera de la pizza */
-  right: 0;      /* Pegado al borde derecho del contenedor */
-  width: 180px;  /* Tamaño fijo profesional */
-  height: 180px; /* Cuadrado perfecto */
+  bottom: -20px; 
+  right: 0;      
+  width: 180px;  
+  height: 180px; 
   z-index: 5;
-  background: var(--dark);
-  border: 8px solid var(--black); /* El "marco" que lo integra al diseño dark */
-  border-radius: 15px;
+  background: white; /* El logo de Pecas y Fresas resalta mejor sobre blanco */
+  border: 8px solid var(--black); 
+  border-radius: 50%; /* Cambiado a circular para hacer match con el logo real */
   overflow: hidden;
   box-shadow: 0 15px 30px rgba(0,0,0,0.5);
 }
@@ -53,23 +55,23 @@
 .hist__img-sec img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Cambiado a contain si es un logo, o cover si es foto */
-  padding: 10px;       /* Aire interno para el logo */
+  object-fit: contain; 
+  padding: 15px;       
 }
 
-/* El Badge de 30+ Años (Menos invasivo) */
+/* El Badge (Color rojo fresa) */
 .hist__years {
   position: absolute;
   top: 30px;
-  left: -25px; /* Sobresale hacia la izquierda */
-  background: var(--red);
+  left: -25px; 
+  background: #dc3545; /* Rojo vibrante de las fresas */
   padding: 1.2rem 1rem;
   border-radius: 12px;
   text-align: center;
   z-index: 10;
-  box-shadow: 10px 10px 30px rgba(231, 76, 60, 0.3);
+  box-shadow: 10px 10px 30px rgba(220, 53, 69, 0.3);
   animation: float 4s ease-in-out infinite;
-  height: auto; /* IMPORTANTE: Para que no sea un rectángulo largo */
+  height: auto; 
 }
 
 .hist__years-num {
@@ -89,7 +91,7 @@
   display: block;
 }
 
-/* 2. PILARES DE LA DERECHA (Masa, Tomate, Moto) */
+/* 2. PILARES DE LA DERECHA */
 .hist__pillars {
   display: flex;
   flex-direction: column;
@@ -99,10 +101,10 @@
 
 .hist__pillar {
   display: flex;
-  align-items: center; /* Alineación vertical perfecta */
+  align-items: center; 
   gap: 1.2rem;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.03); /* Fondo sutil para no verse "pesado" */
+  background: rgba(255, 255, 255, 0.03); 
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.05);
   transition: 0.3s ease;
@@ -110,14 +112,14 @@
 
 .hist__pillar:hover {
   transform: translateX(10px);
-  border-color: var(--red);
+  border-color: #dc3545; /* Rojo fresa al hacer hover */
   background: rgba(255, 255, 255, 0.06);
 }
 
 .hist__pillar-img-icon {
   width: 60px;
   height: 60px;
-  min-width: 60px; /* Evita que se aplaste */
+  min-width: 60px; 
   border-radius: 8px;
   object-fit: cover;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
@@ -134,6 +136,11 @@
 .hist__pillar-desc {
   font-size: 0.82rem;
   color: var(--muted);
+}
+
+/* Ajuste del color verde en el título */
+.hist__content .green {
+  color: #a8d5ba; /* Un verde pastel/menta más acorde a "Café & Vivero" */
 }
 
 /* Animación de flotado */

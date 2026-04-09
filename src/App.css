@@ -1,32 +1,40 @@
+/* app.css */
+
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Barlow:wght@300;400;500&display=swap');
 
 :root {
+  /* Fondo y Superficies (Mantenemos el estilo Dark Elegante) */
   --black:    #0a0a0a;
   --dark:     #111111;
   --surface:  #1a1a1a;
   --card:     #222222;
   --border:   rgba(255,255,255,0.08);
 
-  --red:      #cc1f1f;
-  --red2:     #e62020;
-  --red-glow: rgba(204,31,31,0.25);
+  /* Identidad: Rojo Fresa y Rosas */
+  --red:      #dc3545; /* Strawberry Red */
+  --red2:     #ff4d5e;
+  --red-glow: rgba(220, 53, 69, 0.25);
+  --pink:     #f8c8dc; /* Pastel Pink */
 
-  --green:    #1a7a2e;
-  --green2:   #22a03c;
-  --green-glow: rgba(26,122,46,0.25);
+  /* Identidad: Verde Menta / Vivero */
+  --green:    #89b49a; /* Sage Green */
+  --green2:   #a8d5ba; /* Mint Green */
+  --green-glow: rgba(168, 213, 186, 0.25);
 
+  /* Neutros */
   --white:    #f8f6f2;
   --cream:    #ede8df;
-  --muted:    #888;
-  --gold:     #c8a84b;
+  --muted:    #999;
+  --gold:     #d4af37;
 
+  /* Tipografía */
   --font-display: 'Oswald', sans-serif;
   --font-serif:   'Merriweather', serif;
   --font-body:    'Barlow', sans-serif;
 
   --shadow:    0 4px 24px rgba(0,0,0,0.5);
   --shadow-lg: 0 12px 48px rgba(0,0,0,0.7);
-  --radius:    3px;
+  --radius:    4px;
   --transition: 0.35s cubic-bezier(0.25,0.46,0.45,0.94);
 
   --wa: #25D366;
@@ -45,11 +53,14 @@ body {
 }
 
 ::selection { background: var(--red); color: var(--white); }
+
+/* Scrollbar personalizado */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--dark); }
 ::-webkit-scrollbar-thumb { background: var(--red); border-radius: 2px; }
 
-/* Utilidades */
+/* --- Utilidades de Marca --- */
+
 .tag {
   font-family: var(--font-body);
   font-size: 0.65rem;
@@ -70,11 +81,15 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
+
 .section-title em {
   font-style: normal;
   color: var(--red);
 }
-.section-title .green { color: var(--green2); }
+
+.section-title .green { 
+  color: var(--green2); 
+}
 
 .section-sub {
   font-family: var(--font-serif);
@@ -85,20 +100,22 @@ body {
   max-width: 520px;
 }
 
-.divider-italy {
+/* Divisor con los colores de Pecas y Fresas */
+.divider-brand {
   display: flex;
   gap: 0;
   height: 3px;
-  width: 80px;
+  width: 90px;
   margin: 1.25rem 0;
   overflow: hidden;
   border-radius: 2px;
 }
-.divider-italy span:nth-child(1) { flex:1; background: var(--green2); }
-.divider-italy span:nth-child(2) { flex:1; background: var(--white); }
-.divider-italy span:nth-child(3) { flex:1; background: var(--red); }
+.divider-brand span:nth-child(1) { flex:1; background: var(--green2); } /* Menta */
+.divider-brand span:nth-child(2) { flex:1; background: var(--pink); }   /* Rosa */
+.divider-brand span:nth-child(3) { flex:1; background: var(--red); }    /* Fresa */
 
-/* Botones WhatsApp */
+/* --- Botones --- */
+
 .btn-wa {
   display: inline-flex;
   align-items: center;
@@ -110,14 +127,15 @@ body {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 0.9rem 2rem;
+  padding: 0.9rem 2.2rem;
   border-radius: var(--radius);
   text-decoration: none;
   border: none;
   cursor: pointer;
   box-shadow: 0 4px 20px rgba(37,211,102,0.3);
-  transition: transform var(--transition), box-shadow var(--transition), background 0.2s;
+  transition: all var(--transition);
 }
+
 .btn-wa:hover {
   background: #1da851;
   transform: translateY(-2px);
@@ -135,18 +153,19 @@ body {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 0.9rem 2rem;
+  padding: 0.9rem 2.2rem;
   border-radius: var(--radius);
   text-decoration: none;
   border: none;
   cursor: pointer;
   box-shadow: 0 4px 20px var(--red-glow);
-  transition: transform var(--transition), box-shadow var(--transition), background 0.2s;
+  transition: all var(--transition);
 }
+
 .btn-red:hover {
   background: var(--red2);
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(204,31,31,0.45);
+  box-shadow: 0 8px 28px rgba(220, 53, 69, 0.45);
 }
 
 .btn-outline-white {
@@ -165,37 +184,28 @@ body {
   border: 1.5px solid rgba(255,255,255,0.3);
   text-decoration: none;
   cursor: pointer;
-  transition: border-color var(--transition), background var(--transition);
+  transition: all var(--transition);
 }
+
 .btn-outline-white:hover {
-  border-color: var(--white);
-  background: rgba(255,255,255,0.06);
+  border-color: var(--pink);
+  color: var(--pink);
+  background: rgba(248, 200, 220, 0.05);
 }
 
-/* WhatsApp icon SVG inline helper */
-.wa-icon { width: 20px; height: 20px; fill: currentColor; flex-shrink: 0; }
+/* --- Animaciones --- */
 
-/* Animaciones */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(22px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
+
 @keyframes float {
   0%,100% { transform: translateY(0); }
   50%      { transform: translateY(-8px); }
 }
-@keyframes pulse-glow {
-  0%,100% { box-shadow: 0 0 0 0 var(--red-glow); }
-  50%      { box-shadow: 0 0 24px 8px var(--red-glow); }
-}
 
 .au  { animation: fadeUp 0.7s both; }
-.d1  { animation-delay: 0.05s; }
-.d2  { animation-delay: 0.18s; }
-.d3  { animation-delay: 0.32s; }
-.d4  { animation-delay: 0.48s; }
-.d5  { animation-delay: 0.64s; }
+.d1  { animation-delay: 0.1s; }
+.d2  { animation-delay: 0.2s; }
+.d3  { animation-delay: 0.3s; }

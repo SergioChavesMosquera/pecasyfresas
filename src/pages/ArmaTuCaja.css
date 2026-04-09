@@ -1,0 +1,232 @@
+.arma {
+  padding: 8rem 5% 5rem;
+  background: #fff9fa;
+  min-height: 100vh;
+}
+
+.arma__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.arma__back {
+  text-decoration: none;
+  color: #888;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+  transition: color 0.3s;
+}
+.arma__back:hover { color: #ff69b4; }
+
+/* Layout de dos columnas */
+.arma__layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* Columna de la Caja Visual */
+.arma__visual-col {
+  position: sticky;
+  top: 10rem;
+}
+
+.arma__box-wrap {
+  background: white;
+  border-radius: 40px;
+  padding: 3rem;
+  border: 3px dashed #ffcad4;
+  box-shadow: 0 20px 50px rgba(255, 182, 193, 0.2);
+  margin-bottom: 2rem;
+}
+
+.arma__summary {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+}
+
+.arma__summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.arma__summary-val, .arma__summary-precio {
+  font-weight: 700;
+  color: #d63384;
+}
+
+/* Columna de Controles */
+.arma__section-title {
+  color: #444;
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  display: block;
+}
+
+.arma__size-btns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.arma__size-btn {
+  background: white;
+  border: 2px solid #f0f0f0;
+  border-radius: 18px;
+  padding: 1rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.arma__size-btn.active {
+  border-color: #ff69b4;
+  background: #fff0f5;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 105, 180, 0.15);
+}
+
+.arma__size-letter {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #555;
+}
+
+.arma__size-btn.active .arma__size-letter { color: #ff69b4; }
+
+.arma__size-desc { font-size: 0.7rem; color: #999; text-transform: uppercase; }
+
+/* Buscador */
+.arma__search {
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 15px;
+  border: 2px solid #f0f0f0;
+  margin-bottom: 1.5rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.3s;
+}
+.arma__search:focus { border-color: #ffb6c1; }
+
+/* Lista de Dulces */
+.arma__item-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.arma__pizza-item {
+  background: white;
+  border: 2px solid #f8f8f8;
+  border-radius: 20px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.arma__pizza-item:hover {
+  border-color: #ffb6c1;
+  background: #fffafa;
+}
+
+.arma__pizza-emoji { font-size: 2rem; }
+.arma__pizza-nombre { display: block; font-weight: 700; color: #444; font-size: 0.9rem; }
+.arma__pizza-precio { font-size: 0.75rem; color: #ff69b4; }
+
+.arma__order-btn {
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  text-align: center;
+  background: #25d366; /* Verde WhatsApp */
+  color: white;
+  text-decoration: none;
+  display: block;
+  box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+}
+
+.arma__reset {
+  display: block;
+  margin: 1.5rem auto 0;
+  background: none;
+  border: none;
+  color: #bbb;
+  cursor: pointer;
+  font-size: 0.8rem;
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .arma__layout { grid-template-columns: 1fr; }
+  .arma__visual-col { position: static; }
+}
+
+/* 1. Forzar color de los títulos que no se ven */
+.arma .section-title {
+  color: #a71d2a !important; /* Rojo oscuro para que resalte */
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.arma .tag {
+  color: #d63384 !important; /* Rosa fuerte para el subtítulo */
+  font-weight: 700;
+}
+
+/* 2. Ajustar el espaciado superior para que el Navbar no lo tape */
+.arma {
+  padding: 10rem 5% 5rem; /* Aumenté de 8rem a 10rem */
+  background: #fff9fa;
+  min-height: 100vh;
+}
+
+/* 3. Arreglar los textos de los postres en la lista */
+.arma__pizza-nombre {
+  color: #444 !important; /* Gris oscuro casi negro */
+  font-weight: 700;
+}
+
+.arma__pizza-precio {
+  color: #ff69b4 !important; /* Rosa para el "Agregar a la caja" */
+}
+
+/* 4. Arreglar el resumen (Seleccionados y Consultar) */
+.arma__summary-label {
+  color: #666 !important;
+}
+
+.arma__summary-val, 
+.arma__summary-precio {
+  color: #d63384 !important;
+  font-weight: 800;
+}
+
+/* 5. El botón de volver */
+.arma__back {
+  color: #888 !important;
+  text-decoration: none;
+  font-weight: 600;
+}

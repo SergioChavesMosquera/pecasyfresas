@@ -1,8 +1,13 @@
+/* Menu.css */
+
 .menu { padding: 8rem 5%; background: var(--black); position: relative; }
+
 .menu::before {
   content: ''; position: absolute; top:0; left:0; right:0;
-  height: 1px; background: linear-gradient(90deg, transparent, var(--red), transparent);
+  /* Gradiente con el rojo fresa de la marca */
+  height: 1px; background: linear-gradient(90deg, transparent, #dc3545, transparent);
 }
+
 .menu__header { text-align: center; margin-bottom: 3rem; }
 
 .menu__tabs {
@@ -10,53 +15,118 @@
   gap: 0; margin-bottom: 3rem; flex-wrap: wrap;
   border: 1px solid var(--border);
   width: fit-content; margin-left: auto; margin-right: auto;
+  border-radius: 8px;
+  overflow: hidden;
 }
+
 .menu__tab {
   font-family: var(--font-display); font-size: 0.72rem; font-weight: 600;
   letter-spacing: 0.15em; text-transform: uppercase;
   color: var(--muted); background: none; border: none;
-  padding: 0.7rem 1.6rem; cursor: pointer;
+  padding: 0.8rem 1.8rem; cursor: pointer;
   border-right: 1px solid var(--border);
-  transition: background 0.2s, color 0.2s;
+  transition: all 0.3s ease;
 }
+
 .menu__tab:last-child { border-right: none; }
-.menu__tab:hover { color: var(--white); }
-.menu__tab.active { background: var(--red); color: var(--white); }
+.menu__tab:hover { color: var(--white); background: rgba(220, 53, 69, 0.1); }
+
+.menu__tab.active { 
+  background: #dc3545; 
+  color: var(--white); 
+}
 
 .menu__grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1px; background: var(--border);
   border: 1px solid var(--border); margin-bottom: 3rem;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .menu__card {
-  background: var(--dark); padding: 1.5rem;
-  display: flex; align-items: flex-start; gap: 1rem;
+  background: var(--dark); padding: 1.8rem;
+  display: flex; align-items: flex-start; gap: 1.2rem;
   text-decoration: none; color: inherit;
-  transition: background var(--transition);
+  transition: background 0.3s ease;
   animation: fadeUp 0.5s both; cursor: pointer;
 }
-.menu__card:hover { background: var(--surface); }
-.menu__card:hover .menu__card-cta { color: var(--wa); }
+
+.menu__card:hover { background: #1a1a1a; }
+.menu__card:hover .menu__card-cta { color: #dc3545; }
 
 .menu__card-emoji {
-  font-size: 1.8rem; width: 48px; height: 48px;
-  background: var(--surface); border-radius: var(--radius);
+  font-size: 2rem; width: 54px; height: 54px;
+  background: rgba(255, 255, 255, 0.03); border-radius: 12px;
   display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0; transition: transform var(--transition);
+  flex-shrink: 0; transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.menu__card:hover .menu__card-emoji { transform: scale(1.12) rotate(-6deg); }
+
+.menu__card:hover .menu__card-emoji { transform: scale(1.1) rotate(-8deg); }
 
 .menu__card-body { flex: 1; }
-.menu__card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.4rem; }
-.menu__card-name { font-family: var(--font-display); font-size: 0.95rem; font-weight: 600; color: var(--white); text-transform: uppercase; letter-spacing: 0.04em; line-height: 1.2; }
-.menu__card-price { font-family: var(--font-display); font-size: 0.9rem; color: var(--red); white-space: nowrap; flex-shrink: 0; }
-.menu__card-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; margin-bottom: 0.75rem; }
-.menu__card-cta { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); transition: color 0.2s; }
+
+.menu__card-top { 
+  display: flex; justify-content: space-between; 
+  align-items: flex-start; gap: 0.5rem; margin-bottom: 0.5rem; 
+}
+
+.menu__card-name { 
+  font-family: var(--font-display); font-size: 1rem; font-weight: 600; 
+  color: var(--white); text-transform: uppercase; 
+  letter-spacing: 0.04em; line-height: 1.2; 
+}
+
+.menu__card-prices { text-align: right; }
+.menu__card-desde { font-size: 0.6rem; color: var(--muted); display: block; text-transform: uppercase; }
+
+.menu__card-price { 
+  font-family: var(--font-display); font-size: 1rem; 
+  color: #dc3545; white-space: nowrap; flex-shrink: 0; 
+}
+
+.menu__card-desc { 
+  font-size: 0.82rem; color: var(--muted); 
+  line-height: 1.6; margin-bottom: 0.85rem; 
+}
+
+.menu__card-tag {
+  display: inline-block;
+  font-size: 0.6rem;
+  background: rgba(168, 213, 186, 0.15); /* Tono verde menta suave */
+  color: #a8d5ba;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.menu__card-cta { 
+  font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; 
+  text-transform: uppercase; color: var(--muted); 
+  transition: color 0.2s; 
+}
 
 .menu__footer {
   display: flex; align-items: center; justify-content: space-between;
-  flex-wrap: wrap; gap: 1rem;
+  flex-wrap: wrap; gap: 1.5rem;
   padding-top: 2.5rem; border-top: 1px solid var(--border);
 }
-.menu__footer p { font-family: var(--font-serif); font-size: 0.95rem; color: var(--muted); font-style: italic; }
+
+.menu__footer p { font-family: var(--font-serif); font-size: 1rem; color: var(--muted); font-style: italic; }
+
+/* Especial para el divider tipo repostería */
+.divider-pastry {
+  display: flex; justify-content: center; gap: 8px; margin: 15px 0;
+}
+.divider-pastry span {
+  width: 6px; height: 6px; border-radius: 50%; background: #dc3545;
+}
+.divider-pastry span:nth-child(2) { opacity: 0.6; }
+.divider-pastry span:nth-child(3) { opacity: 0.3; }
+
+@media (max-width: 600px) {
+  .menu__grid { grid-template-columns: 1fr; }
+  .menu__footer { justify-content: center; text-align: center; }
+}

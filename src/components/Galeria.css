@@ -1,6 +1,6 @@
 .gal {
   padding: 8rem 5%;
-  background: var(--black);
+  background: var(--white);
 }
 
 .gal__header {
@@ -8,7 +8,14 @@
   margin-bottom: 4rem;
 }
 
-/* El Layout de columnas */
+/* CORRECCIÓN: Estilo para el título que no se veía en la captura */
+.gal__header .section-title {
+  color: #a71d2a; /* Rojo fresa oscuro para legibilidad */
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
 .gal__layout {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -24,28 +31,29 @@
 
 .gal__img-wrap {
   position: relative;
-  border-radius: 20px;
+  border-radius: 24px;
   overflow: hidden;
-  background: var(--dark);
+  background: #fdf2f2;
   cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 .gal__img {
   width: 100%;
   height: auto;
   display: block;
-  transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Efecto al pasar el mouse */
 .gal__item:hover .gal__img {
-  transform: scale(1.08);
+  transform: scale(1.1);
 }
 
 .gal__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);
+  /* CORRECCIÓN: Gradiente más oscuro (negro a transparente) para que el texto blanco resalte */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.2) 50%, transparent 100%);
   display: flex;
   align-items: flex-end;
   padding: 1.5rem;
@@ -54,13 +62,14 @@
 }
 
 .gal__overlay span {
-  color: var(--white);
+  color: #ffffff; /* Blanco puro */
   font-family: var(--font-display);
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transform: translateY(10px);
+  font-weight: 700; /* Más grueso para leer mejor */
+  font-size: 1.1rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  transform: translateY(15px);
   transition: transform 0.4s ease;
+  width: 100%; /* Asegura que el texto use el espacio */
 }
 
 .gal__item:hover .gal__overlay {
@@ -77,7 +86,6 @@
   justify-content: center;
 }
 
-/* Responsivo */
 @media (max-width: 992px) {
   .gal__layout { grid-template-columns: repeat(2, 1fr); }
 }
@@ -85,4 +93,5 @@
 @media (max-width: 600px) {
   .gal__layout { grid-template-columns: 1fr; }
   .gal { padding: 4rem 5%; }
+  .gal__header .section-title { font-size: 2rem; }
 }

@@ -1,0 +1,250 @@
+/* PizzaDetail.css */
+
+.pdetail {
+  padding: 7rem 5% 5rem;
+  background: var(--black);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.pdetail__bg { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+.pdetail__bg-glow {
+  position: absolute; top: -10%; right: -10%;
+  width: 600px; height: 600px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(220, 53, 69, 0.07) 0%, transparent 70%);
+}
+.pdetail__bg-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.pdetail__container {
+  position: relative; z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.pdetail__img-col {
+  position: sticky;
+  top: 100px;
+  animation: fadeUp 0.6s both;
+}
+
+.pdetail__img-wrap {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: zoom-in;
+  background: var(--surface);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+.pdetail__img {
+  width: 100%;
+  aspect-ratio: 1/1; /* Cuadrado queda mejor para tortas */
+  object-fit: cover;
+  display: block;
+  transition: transform 0.1s ease;
+}
+
+.pdetail__img-wrap.zoomed .pdetail__img-overlay { opacity: 0; }
+.pdetail__img-wrap.zoomed .pdetail__zoom-hint { opacity: 0; }
+
+.pdetail__img-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 50%);
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.pdetail__zoom-hint {
+  position: absolute;
+  bottom: 1rem; right: 1rem;
+  display: flex; align-items: center; gap: 0.4rem;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(8px);
+  color: var(--white);
+  font-size: 0.7rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.pdetail__img-badge {
+  position: absolute;
+  top: 1rem; left: 1rem;
+  display: flex; align-items: center; gap: 0.5rem;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+}
+
+.pdetail__img-badge-cat {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #dc3545; /* Rojo Fresa */
+}
+
+.pdetail__emoji-big {
+  width: 100%; aspect-ratio: 1/1;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 8rem;
+}
+
+.pdetail__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: fadeUp 0.6s 0.15s both;
+}
+
+.pdetail__breadcrumb {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 0.7rem; letter-spacing: 0.1em;
+  color: var(--muted);
+}
+.pdetail__breadcrumb a:hover { color: #dc3545; }
+
+.pdetail__nombre {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--white);
+  line-height: 1;
+}
+
+.pdetail__detalle {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.85;
+}
+
+.pdetail__label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.8rem;
+}
+
+/* Selector tamaños Repostería */
+.pdetail__sizes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.6rem;
+}
+
+.pdetail__size-btn {
+  display: flex; flex-direction: column; align-items: center; gap: 0.2rem;
+  padding: 1rem 0.5rem;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.pdetail__size-btn:hover { border-color: #dc3545; transform: translateY(-3px); }
+.pdetail__size-btn.active { border-color: #dc3545; background: rgba(220, 53, 69, 0.1); }
+
+.pdetail__size-letter {
+  font-family: var(--font-display);
+  font-size: 1.4rem; font-weight: 700;
+  color: var(--white);
+}
+
+.pdetail__size-btn.active .pdetail__size-letter { color: #dc3545; }
+
+.pdetail__size-cm { font-size: 0.6rem; color: var(--muted); }
+
+.pdetail__size-price {
+  font-family: var(--font-display); font-size: 0.75rem;
+  color: #a8d5ba; font-weight: 600;
+}
+
+/* Variantes (Sabores) */
+.pdetail__variants-grid {
+  display: flex; flex-wrap: wrap; gap: 0.6rem;
+}
+.pdetail__variant-btn {
+  padding: 0.5rem 1.2rem;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.pdetail__variant-btn:hover { border-color: #dc3545; color: var(--white); }
+.pdetail__variant-btn.active { background: #dc3545; border-color: #dc3545; color: var(--white); }
+
+/* Tarjeta Precio */
+.pdetail__price-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+.pdetail__price-card-inner {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.5rem;
+}
+.pdetail__precio {
+  font-family: var(--font-display);
+  font-size: 2.2rem; color: #a8d5ba; font-weight: 700;
+}
+
+.pdetail__price-size-badge {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  color: #dc3545;
+  background: rgba(220, 53, 69, 0.1);
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(220, 53, 69, 0.2);
+}
+
+.pdetail__wa-btn {
+  display: flex; align-items: center; justify-content: center; gap: 0.8rem;
+  width: 100%;
+  background: #25D366;
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 0.95rem; font-weight: 600;
+  text-transform: uppercase;
+  padding: 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.pdetail__wa-btn:hover { background: #1da851; transform: translateY(-2px); }
+
+.pdetail__back {
+  display: block; text-align: center;
+  font-size: 0.75rem; color: var(--muted);
+  text-decoration: none; margin-top: 1rem;
+}
+.pdetail__back:hover { color: var(--white); }
+
+@media (max-width: 900px) {
+  .pdetail__container { grid-template-columns: 1fr; gap: 3rem; }
+  .pdetail__img-col { position: static; }
+}

@@ -1,17 +1,108 @@
-.footer { background:var(--dark); padding:5rem 5% 2rem; position:relative; overflow:hidden; }
-.footer__tricolor { display:flex; height:3px; position:absolute; top:0; left:0; right:0; }
-.footer__tricolor span:nth-child(1){flex:1;background:var(--green2);}
-.footer__tricolor span:nth-child(2){flex:1;background:var(--white);}
-.footer__tricolor span:nth-child(3){flex:1;background:var(--red);}
-.footer__top { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:3rem; padding-bottom:3rem; border-bottom:1px solid var(--border); margin-bottom:2rem; }
-.footer__logo { font-family:var(--font-display); font-size:1.8rem; font-weight:700; color:var(--white); letter-spacing:0.08em; margin-bottom:0.75rem; }
-.footer__sub { font-family:var(--font-serif); font-size:0.85rem; color:var(--muted); line-height:1.7; margin-bottom:1.25rem; font-style:italic; }
-.footer__wa { font-size:0.78rem; padding:0.65rem 1.25rem; }
-.footer__col h4 { font-family:var(--font-display); font-size:0.75rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--red); margin-bottom:1.1rem; }
-.footer__col ul { list-style:none; display:flex; flex-direction:column; gap:0.6rem; }
-.footer__col ul li a, .footer__col ul li span { font-size:0.85rem; color:rgba(255,255,255,0.45); text-decoration:none; transition:color 0.2s; }
-.footer__col ul li a:hover { color:var(--white); }
-.footer__bottom { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; font-size:0.72rem; color:rgba(255,255,255,0.25); }
-.footer__credit { color:var(--gold); opacity:0.65; }
-@media (max-width:900px) { .footer__top { grid-template-columns:1fr 1fr; } .footer__brand { grid-column:span 2; } }
-@media (max-width:500px) { .footer__top { grid-template-columns:1fr; } .footer__brand { grid-column:span 1; } }
+.footer { 
+  background: #1a1a1a; /* Un gris muy oscuro, casi negro, para que resalten los rosados */
+  padding: 5rem 5% 2rem; 
+  position: relative; 
+  overflow: hidden; 
+}
+
+/* Barra de acento superior sutil en lugar de la tricolor */
+.footer__accent-bar { 
+  height: 4px; 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  background: linear-gradient(90deg, #ff69b4, #ffb6c1); /* Degradado rosa */
+}
+
+.footer__top { 
+  display: grid; 
+  grid-template-columns: 2fr 1fr 1fr 1fr; 
+  gap: 3rem; 
+  padding-bottom: 3rem; 
+  border-bottom: 1px solid rgba(255,255,255,0.1); 
+  margin-bottom: 2rem; 
+}
+
+.footer__logo { 
+  font-family: var(--font-display); 
+  font-size: 1.8rem; 
+  font-weight: 700; 
+  color: #ff69b4; /* Rosa característico */
+  letter-spacing: 0.05em; 
+  margin-bottom: 0.75rem; 
+}
+
+.footer__sub { 
+  font-family: var(--font-serif); 
+  font-size: 0.85rem; 
+  color: #999; 
+  line-height: 1.7; 
+  margin-bottom: 1.25rem; 
+  font-style: italic; 
+}
+
+.footer__wa { 
+  font-size: 0.78rem; 
+  padding: 0.65rem 1.25rem; 
+  background-color: #25d366;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+.footer__col h4 { 
+  font-family: var(--font-display); 
+  font-size: 0.75rem; 
+  font-weight: 600; 
+  letter-spacing: 0.2em; 
+  text-transform: uppercase; 
+  color: #ffb6c1; /* Rosa claro para los títulos */
+  margin-bottom: 1.1rem; 
+}
+
+.footer__col ul { 
+  list-style: none; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 0.6rem; 
+}
+
+.footer__col ul li a, .footer__col ul li span { 
+  font-size: 0.85rem; 
+  color: rgba(255,255,255,0.5); 
+  text-decoration: none; 
+  transition: color 0.2s; 
+}
+
+.footer__col ul li a:hover { 
+  color: #ff69b4; 
+}
+
+.footer__bottom { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  flex-wrap: wrap; 
+  gap: 1rem; 
+  font-size: 0.72rem; 
+  color: rgba(255,255,255,0.3); 
+}
+
+.footer__credit { 
+  color: #ffb6c1; 
+  opacity: 0.8; 
+}
+
+@media (max-width: 900px) { 
+  .footer__top { grid-template-columns: 1fr 1fr; } 
+  .footer__brand { grid-column: span 2; } 
+}
+
+@media (max-width: 500px) { 
+  .footer__top { grid-template-columns: 1fr; } 
+  .footer__brand { grid-column: span 1; } 
+}

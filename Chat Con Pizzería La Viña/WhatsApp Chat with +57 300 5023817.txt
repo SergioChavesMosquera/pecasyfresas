@@ -1,0 +1,231 @@
+3/30/26, 15:34 - Messages and calls are end-to-end encrypted. Only people in this chat can read, listen to, or share them. *Learn more*
+3/30/26, 15:34 - Sergio Chaves: Hola Pizzeria LaViña delivery 
+
+Soy Sergio, desarrollador web. Vi su negocio en Google Maps y tienen muy buenas reseñas 
+
+Noté que no tienen página web propia — así que armé un concepto rápido de cómo podría verse la de ustedes.
+
+¿Se lo mando? Es sin costo ni compromiso.
+
+— Sergio | SerStack
+3/30/26, 15:34 - +57 300 5023817: Gracias por comunicarte con pizzeria la viña. ¿Cómo podemos ayudarte? Déjame tu pedido y en unos minutos te confirmo el recibido
+3/30/26, 15:35 - Sergio Chaves: Hola Pizzeria LaViña delivery 
+
+Soy Sergio, desarrollador web. Vi su negocio en Google Maps y tienen muy buenas reseñas 
+
+Noté que no tienen página web propia — así que armé un concepto rápido de cómo podría verse la de ustedes.
+
+¿Se lo mando? Es sin costo ni compromiso.
+
+— Sergio | SerStack
+3/30/26, 15:36 - +57 300 5023817: Si por fa ..gracias..estoy manejando solo domicilios
+3/30/26, 16:07 - Sergio Chaves: https://pizzerialavina-plantilla.vercel.app/
+3/30/26, 16:07 - Sergio Chaves: Mira, ese es el prototipo interactivo que diseñé para Pizzería La Viña.
+
+Los recuadros con emojis son espacios reservados para fotos reales de tus pizzas; la idea es que el cliente pueda 'antojarse' apenas entre. El sitio ya está configurado para que el botón de 'Pedir a domicilio' abra directamente tu WhatsApp con el pedido listo.
+
+¿Qué te parece el estilo y los colores?
+3/30/26, 16:08 - +57 300 5023817: Voy a ver..esperando te hablo en un 15 minutos
+3/30/26, 16:08 - +57 300 5023817: Voy manejando
+3/30/26, 17:07 - +57 300 5023817: Me parece bien 👍..
+3/30/26, 17:07 - +57 300 5023817: Ahora toca es ir tomando fotos..con un buen celular..
+3/30/26, 17:21 - Sergio Chaves: ¡Totalmente! Unas buenas fotos de tus pizzas son el 50% de la venta.
+
+Aprovecho para comentarte: esa página que te pasé es una plantilla de demostración que armamos en SerStack para que vieras el potencial. Para montar la web oficial de Pizzería La Viña, el servicio profesional incluiría:
+
+Dominio propio de tu web.
+
+Web completamente funcional y en línea.
+
+Menú digital interactivo con tus precios, sabores y catálogo detallado.
+
+Botón directo a tu WhatsApp para que recibas los pedidos ya organizados.
+
+Soporte técnico post-entrega para cualquier ajuste o actualización que necesites.
+
+Podemos agendar una llamada antes de iniciar el proyecto si quieres recalcar algún detalle específico, o qué implementaciones quieres en la página y qué deseas exactamente, para realizar algo completamente preciso a lo que buscas y que seamos quienes puedan llevarlo a la realidad.
+
+El costo por el desarrollo total y la entrega de tu página es de $349.000 COP.
+
+Es una inversión única para profesionalizar tus domicilios. ¿Cómo lo ves? Si tienes un presupuesto diferente en mente, podemos conversarlo para ajustar una oferta que te funcione.
+3/30/26, 17:31 - +57 300 5023817: De acuerdo
+3/30/26, 17:34 - Sergio Chaves: Perfecto! Me alegra que iniciemos con este proyecto para potenciar los domicilios de la pizzería.
+​Para comenzar, nuestra metodología de trabajo es la siguiente:
+
+
+​Pago: Manejamos un 50% de anticipo para iniciar el desarrollo y el 50% restante al finalizar, una vez que estés satisfecho con el resultado. Aceptamos, nequi, daviplata y transferencia. 
+
+
+​Tiempo de entrega: El sitio estará listo en un máximo de 3 a 5 días hábiles (aunque es muy probable que lo tengamos listo antes, ¡incluso en un día!).
+
+
+​Seguimiento: Te enviaré actualizaciones diarias para que veas el progreso y podamos ir haciendo ajustes en tiempo real.
+
+​Si te parece bien, confírmame y te envío los datos para el anticipo. Así apenas reciba el soporte, nos ponemos manos a la obra con el código y el menú.
+3/30/26, 17:37 - +57 300 5023817: Para mañana en la tarde amigo..porq ya hoy gaste ..!
+3/30/26, 17:38 - Sergio Chaves: Dale perfecto, no hay problema
+3/30/26, 17:38 - +57 300 5023817: Dale
+3/30/26, 17:39 - Sergio Chaves: Igual, te enviaré los datos de pago en caso de que los necesites:
+
+Daviplata
+3128036725 - Sergio Gabriel Chaves Mosquera 
+
+Bre-b
+@3128036725
+3/30/26, 17:39 - Sergio Chaves: Que tengas un excelente día, y me avisas apenas realices el pago para iniciar con tu proyecto, también puedes comentarme qué quieres mejorar e implementar en base a la plantilla que te enviamos para empezar por eso
+3/30/26, 17:40 - Sergio Chaves: Y también, puedes enviarnos las imágenes que dijiste, para poder implementarlas en la pagina
+3/30/26, 17:42 - +57 300 5023817: IMG-20260330-WA0001.jpg (file attached)
+3/30/26, 17:42 - +57 300 5023817: Enviado el 50% Sergio.. comenzemos de una
+3/30/26, 17:45 - Sergio Chaves: Si señor, recibido, disculpa cual es tu nombre? 
+
+Y entonces envíame cuando puedas las imágenes que dijiste, yo voy trabajando en cosas previas y mejoras de la plantilla actual
+3/30/26, 17:45 - +57 300 5023817: Angel morales
+3/30/26, 17:46 - Sergio Chaves: Listo señor Angel, con gusto
+3/30/26, 17:46 - +57 300 5023817: 
+3/30/26, 17:46 - +57 300 5023817: IMG-20260330-WA0002.jpg (file attached)
+Estas tengo pero no son de iPhone
+3/30/26, 17:46 - +57 300 5023817: IMG-20260330-WA0003.jpg (file attached)
+3/30/26, 17:46 - +57 300 5023817: IMG-20260330-WA0004.jpg (file attached)
+3/30/26, 17:46 - +57 300 5023817: IMG-20260330-WA0005.jpg (file attached)
+3/30/26, 17:46 - +57 300 5023817: IMG-20260330-WA0006.jpg (file attached)
+3/30/26, 17:46 - +57 300 5023817: VID-20260330-WA0007.mp4 (file attached)
+Estas tengo pero no son de iPhone
+3/30/26, 17:46 - +57 300 5023817: VID-20260330-WA0008.mp4 (file attached)
+3/30/26, 17:47 - +57 300 5023817: VID-20260330-WA0009.mp4 (file attached)
+3/30/26, 17:47 - +57 300 5023817: VID-20260330-WA0010.mp4 (file attached)
+3/30/26, 17:47 - +57 300 5023817: VID-20260330-WA0011.mp4 (file attached)
+3/30/26, 17:47 - Sergio Chaves: Esta es la web de nuestro proyecto en caso de que quieras conocer más de nosotros:
+
+Serstack-es.vercel.app
+3/30/26, 17:47 - Sergio Chaves: Perfecto, trabajaré con esto y te comentaré si la calidad afecta luego, aunque lo dudo, tratare de aumentar la calidad aqui
+3/30/26, 17:48 - +57 300 5023817: Hagale
+3/30/26, 17:48 - +57 300 5023817: Nesecito tambn en el.face  publicaciones..
+3/30/26, 17:48 - +57 300 5023817: Y en el instagram
+3/30/26, 17:49 - +57 300 5023817: Hacer videos
+3/30/26, 17:50 - Sergio Chaves: Claro, aunque eso ya sería con videos previos que deberías tener, y es ajeno a la página web, podemos eso si conectar Instagram y Facebook a la web
+
+Y ya posterior a la primera entrega de la web, revisamos la publicación de contenido en redes
+3/30/26, 17:51 - +57 300 5023817: Ok
+3/30/26, 19:14 - Sergio Chaves: Hola Angel, tienes un correo electronico que podamos usar para crearte una cuenta en la plataforma que va a mantener la pagina activa
+3/30/26, 19:15 - Sergio Chaves: Para que al momento de la entrega solo tu tengas acceso a ese panel de administrador, entonces debe ser un correo de tu propiedad
+3/30/26, 19:16 - +57 300 5023817: El correo mio es dondeangel14@hotmail.com
+3/30/26, 19:20 - Sergio Chaves: Te debio llegar un codigo de confirmación de GitHub a ese correo, me confirmas?
+3/30/26, 19:21 - +57 300 5023817: IMG-20260330-WA0021.jpg (file attached)
+3/30/26, 19:22 - Sergio Chaves: Perfecto
+3/31/26, 09:40 - Sergio Chaves: Hola Angel buenos dias
+3/31/26, 09:41 - Sergio Chaves: Tu de casualidad tienes un menú completo con precios de todos los platos y/o pizzas qué ofrecen en el restaurante
+3/31/26, 09:41 - Sergio Chaves: Para implementarlo completo a la pagina
+3/31/26, 09:41 - +57 300 5023817: Buenos días
+3/31/26, 09:41 - +57 300 5023817: Si claro
+3/31/26, 09:44 - +57 300 5023817: https://www.canva.com/design/DAG8XU_3y3M/MAzxOMOcYss8Bc4MCxfeHQ/edit?utm_content=DAG8XU_3y3M&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+3/31/26, 09:44 - +57 300 5023817: 
+3/31/26, 09:44 - +57 300 5023817: IMG-20260331-WA0002.jpg (file attached)
+3/31/26, 09:44 - +57 300 5023817: IMG-20260331-WA0003.jpg (file attached)
+3/31/26, 09:44 - +57 300 5023817: IMG-20260331-WA0004.jpg (file attached)
+3/31/26, 09:44 - +57 300 5023817: IMG-20260331-WA0005.jpg (file attached)
+3/31/26, 09:44 - +57 300 5023817: IMG-20260331-WA0006.jpg (file attached)
+3/31/26, 09:45 - Sergio Chaves: Listo prefecto Angel, ahí seguimos, por la tarde te muestro un avance y me comentas que te parece
+3/31/26, 09:46 - +57 300 5023817: Bno..
+3/31/26, 09:46 - +57 300 5023817: Esta bn
+3/31/26, 13:12 - Sergio Chaves: Hola, oye una pregunta, según las imágenes que me mandaste, vi que tienes pizzas mitad y mitad, se pueden armar solo de esa manera? O hay otras formas y como funciona?
+
+Es por si te parece, creo que quedaría bien, un apartado de "arma tu pizza" en el que los clientes puedan interactuar y armar su pizza desde la propia página y los redirija al WhatsApp con ya el pedido listo y a ti no te toque explicar ni nada, solo leer
+3/31/26, 13:46 - +57 300 5023817: PTT-20260331-WA0013.opus (file attached)
+3/31/26, 13:49 - Sergio Chaves: Listo dale perfecto, ya en la tarde te muestro la primera versión de la página con eso implementado
+3/31/26, 13:50 - +57 300 5023817: STK-20260331-WA0014.webp (file attached)
+3/31/26, 13:51 - Sergio Chaves: He utilizado inteligencia artificial para hacer unas imágenes de las pizzas con mejor calidad para que se vean excelentes en cualquier celular
+3/31/26, 13:51 - Sergio Chaves: IMG-20260331-WA0015.jpg (file attached)
+Que tal te parecen?
+3/31/26, 13:57 - +57 300 5023817: Si esta bn
+3/31/26, 15:49 - +57 300 5023817: Tambn puedes descargar la app de salvatore..pizza..y ahí estan las fotos de las pizzas tambn más claras
+3/31/26, 15:55 - Sergio Chaves: Listo vale
+3/31/26, 19:07 - Sergio Chaves: Hola Angel buenas noches
+3/31/26, 19:07 - Sergio Chaves: Para comentarte que tu Web ya está lista y funcionando
+3/31/26, 19:07 - Sergio Chaves: https://pizzerialavina.vercel.app/
+3/31/26, 19:08 - Sergio Chaves: Mira, revisa bien y cuéntame que te parece
+3/31/26, 19:10 - Sergio Chaves: Mientras tanto te comento:
+Las fotos las hice con inteligencia artificial para la calidad, y se ven muy bien, solo que en el apartado de galería, se alcanza a ver la marca de agua abajo a la derecha.
+Para quitar la marca de agua toca con ia también, pero hoy ya no puedo porque excedí mi límite diario de imágenes con las del menú, mañana podría corregir eso de la imagen, y en los siguientes días hasta quitar la marca de agua en todas
+
+Para las fotos de Asados en particular, sería bueno que tuvieras imágenes propias, ya que esas son de Google y en eso si sería mejor mostrar el producto real
+3/31/26, 19:11 - Sergio Chaves: El resto parece funcionar bien desde celular y computador
+3/31/26, 19:11 - Sergio Chaves: Me avisas que tal
+3/31/26, 19:11 - Sergio Chaves: Y ahí te entrego el manual de usuario, credenciales, etc.
+3/31/26, 19:14 - +57 300 5023817: Ok
+3/31/26, 19:16 - +57 300 5023817: Bno amigo..yo ya no tengo el local de la 14 con 44..ahora estoy en san jose..pero sin dirección por lo de la extorsión...solo despacho domicilios..a veces me preguntan en donde estamos..pero solo les digo no atendemos al público..solo domicilios..ni para recojer..porq seria dar la ubicación y no puedo..
+3/31/26, 19:23 - Sergio Chaves: Ah listo. Vale.
+Voy a quitar la dirección de la 14 con 44, y decir que solamente que en San Jose si?
+3/31/26, 19:24 - +57 300 5023817: Será..sin dirección
+3/31/26, 19:25 - Sergio Chaves: Ok vale, sin dirección. Y hay alguna otra cosa que quieras resaltar, modificar o corregir? O te parece que todo esta bien? Revisa tambien la sección de "Arma tu pizza" y dime que te parece. En mi opinion quedo muy bien. Por cierto, todos los botones de whatsapp, redirigen a este numero, esta bien verdad?
+3/31/26, 19:25 - +57 300 5023817: Sii
+3/31/26, 19:26 - +57 300 5023817: Aunque tengo oyro número 3106800438
+3/31/26, 19:26 - +57 300 5023817: También del negocio
+3/31/26, 19:26 - +57 300 5023817: Y es el nequi y llave
+3/31/26, 19:26 - Sergio Chaves: Y a cual prefieres recibir el mensaje
+3/31/26, 19:26 - Sergio Chaves: Mira, voy a hacer desde aqui el arma tu pizza como si yo fuera un cliente, y mira el mensaje que te llegaria
+3/31/26, 19:26 - Sergio Chaves: Hola! Quiero armar mi pizza:
+Tamano: XL (45 cm)
+Mitad izquierda: Salami
+Mitad derecha: Hawaiana
+Precio: $75.000
+3/31/26, 19:27 - +57 300 5023817: Así es..perfecto
+3/31/26, 19:27 - Sergio Chaves: Ese mensaje es el que te llegara con cada cliente, a que numero? Aunque tengas 2, pues deberiamos escoger solo 1 para eso
+3/31/26, 19:27 - Sergio Chaves: Y lo del nequi y llave tu ya lo especificarias por este mismo medio respondiendo a este mensaje
+3/31/26, 19:28 - +57 300 5023817: Al otro..mejor para q se quede el mismo número para transferencia
+3/31/26, 19:28 - +57 300 5023817: 3106800438
+3/31/26, 19:28 - Sergio Chaves: Ok vale perfecto
+3/31/26, 19:28 - Sergio Chaves: Entonces para cambiar:
+El numero de whatsapp
+Ocultar la direccion
+
+Algo mas?
+3/31/26, 19:28 - +57 300 5023817: Solo eso
+3/31/26, 19:29 - Sergio Chaves: Ok perfecto, voy a corregirlo te aviso, y te confirmo para enviarte las credenciales para que tengas el control de la pagina, el documento de manual de usuario te lo enviare en 1 o 2 dias, porque es demorado, igual seguire atendiendote aqui cuando necesites para el soporte vale
+3/31/26, 19:30 - +57 300 5023817: Dale
+3/31/26, 19:51 - Sergio Chaves: Listo! Revisa, y creo que ya, te voy a enviar un mensaje de nuevo desde la pagina desde la seccion de arma tu pizza y llegara a tu otro numero
+3/31/26, 19:53 - Sergio Chaves: Ya quite la dirección también, especificando que solo domicilios
+3/31/26, 19:53 - +57 300 5023817: Ok
+3/31/26, 19:53 - Sergio Chaves: Me avisas alguna otra cosa que necesites corregir
+3/31/26, 19:54 - +57 300 5023817: El.link
+3/31/26, 19:54 - +57 300 5023817: Mandalo
+3/31/26, 19:54 - Sergio Chaves: https://pizzerialavina.vercel.app/
+3/31/26, 20:03 - +57 300 5023817: Esta bn
+3/31/26, 20:05 - Sergio Chaves: Perfecto, me alegra escuchar eso Angel, te parece si vamos cuadrando el pago del 50% restante para poder enviarte tus contraseñas de control de la página? 
+Las necesitarás en caso de que algo llegara a fallar y debas manejar la página desde el servidor, de igual manera aún así yo estaré aquí disponible para ti en caso de que algo falle para ayudarte a solucionarlo <This message was edited>
+3/31/26, 20:13 - +57 300 5023817: Espera q pa hoy no tengo..por ahí pal miercoles
+3/31/26, 20:14 - Sergio Chaves: A bueno vale, entonces con eso alcanzo a hacer el manual de usuario, y ya podría enviarte todo de una vez apenas pagues
+3/31/26, 20:16 - +57 300 5023817: Exacto
+3/31/26, 20:17 - Sergio Chaves: Vale perfecto Angel, que tengas buena noche
+Quedo Atento!
+3/31/26, 20:18 - +57 300 5023817: Igualmente bro
+4/1/26, 11:15 - Sergio Chaves: Hola don Angel buenos dias
+4/1/26, 11:15 - Sergio Chaves: Ya esta listo el manual de usuario y ya arregle 6 de las 9 imágenes que tenían la marca de agua visible
+4/1/26, 11:16 - Sergio Chaves: Las 3 restantes toca mañana, ya que para arreglarlas, hay un límite diario de 6 imágenes, entonces mañana arreglaría las 3 restantes
+4/1/26, 11:16 - Sergio Chaves: Y para confirmarte entonces si hacemos la entrega hoy?
+4/1/26, 11:17 - +57 300 5023817: Bnos dias...más luego te confirmo
+4/1/26, 11:18 - Sergio Chaves: Ok si señor, quedo atento!
+4/1/26, 11:18 - +57 300 5023817: Dale
+4/4/26, 10:22 - Sergio Chaves: Hola Don Angel
+Buenos dias
+4/4/26, 10:24 - Sergio Chaves: Te escribo para confirmarte si podemos realizar hoy la entrega de tu web para poder entregarte las contraseñas, control de la web completo, con el manual de usuario
+4/4/26, 10:41 - +57 300 5023817: Buendia  Sergio..si claro..déjame llegar a a casa y te envio
+4/4/26, 10:41 - +57 300 5023817: 20 minutos
+4/4/26, 11:18 - +57 300 5023817: IMG-20260404-WA0000.jpg (file attached)
+4/4/26, 11:40 - Sergio Chaves: Angel, listo perfecto, recibido
+4/4/26, 11:41 - Sergio Chaves: Te acabo de enviar un correo haciéndote la entrega de manual de usuario y credenciales, también para comentarte una situación con tu cuenta de Github qué estamos arreglando, por el momento no ha presentado fallas en la web, pero debemos corregirlo para evitar eso
+4/4/26, 11:41 - Sergio Chaves: A tu correo te debió llegar también otro código de github, si me lo pudieras compartir te agradecería para realizar ese proceso
+4/4/26, 11:41 - +57 300 5023817: Ok
+4/4/26, 11:42 - +57 300 5023817: Voy
+4/4/26, 11:42 - +57 300 5023817: IMG-20260404-WA0001.jpg (file attached)
+4/4/26, 11:43 - Sergio Chaves: Perfecto, ahora necesito un número de teléfono al cual pueda llegar un mensaje de texto, puede ser este mismo?
+4/4/26, 11:44 - +57 300 5023817: Si
+4/4/26, 11:45 - Sergio Chaves: Ya envié el código, es de 6 digitos
+4/4/26, 11:45 - +57 300 5023817: IMG-20260404-WA0002.jpg (file attached)
+4/4/26, 11:52 - Sergio Chaves: Listo Angel
+Ya radique el ticket con soporte de Github y te llegará un correo a tu Hotmail con la respuesta en los próximos días. Por favor esta pendiente y avísame cuando llegue para coordinar y arreglar el incoveniente. 
+Esto hace parte de los 3 meses de soporte sin costo adicional, entonces no hay problema por contactarme.
+
+Esto no está afectando tu web directamente, pero siempre es mejor tenerlo arreglado y funcionando para cualquier futuro evento. <This message was edited>
+4/4/26, 11:54 - +57 300 5023817: Ok ta bn pue..!
+4/4/26, 11:55 - Sergio Chaves: Muchas gracias por confiar en SerStack para este proyecto, fue un placer trabajar en él. Estaremos en contacto durante los próximos 3 meses para cualquier cosa que necesite. Una vez solucionemos lo de GitHub, te pediré el favor de una pequeña reseña sobre tu experiencia para incluirla en nuestro portafolio. ¡Mucho éxito con la pizzería! 🍕
+4/4/26, 11:56 - +57 300 5023817: Muchas gracias

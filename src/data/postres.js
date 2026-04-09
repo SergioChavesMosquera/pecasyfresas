@@ -1,0 +1,23 @@
+export const postres = [
+  // ─── TORTAS ──────────────────────────────────────────────────
+  { id:'torta-chocolate',  nombre:'Torta de Chocolate',      categoria:'Tortas', desc:'Torta húmeda de chocolate artesanal con relleno de fudge.',              precios:{ small:'$45.000', medium:'$65.000', large:'$85.000', xlarge:'$110.000' }, emoji:'🍫', imagen:'/images/placeholder-torta.jpg' },
+  { id:'torta-vainilla',   nombre:'Torta de Vainilla',       categoria:'Tortas', desc:'Clásica torta de vainilla suave con capas de arequipe.',                precios:{ small:'$40.000', medium:'$60.000', large:'$80.000', xlarge:'$100.000' }, emoji:'🍰', imagen:'/images/placeholder-torta.jpg' },
+  { id:'torta-tres-leches',nombre:'Tres Leches Tradicional', categoria:'Tortas', desc:'Bizcocho bañado en tres leches con decoración de crema y canela.',           precios:{ small:'$35.000', medium:'$55.000', large:'$75.000', xlarge:null },        emoji:'🥛', imagen:'/images/placeholder-torta.jpg' },
+  { id:'red-velvet',       nombre:'Red Velvet',              categoria:'Tortas', desc:'Torta aterciopelada con un toque de cacao y frosting de queso crema.',  precios:{ small:'$50.000', medium:'$70.000', large:'$90.000', xlarge:null },        emoji:'🧁', imagen:'/images/placeholder-torta.jpg' },
+
+  // ─── POSTRES PERSONALES ──────────────────────────────────────
+  { id:'cheesecake-frutos', nombre:'Cheesecake Frutos Rojos', categoria:'Postres', desc:'Base de galleta crocante, crema de queso y coulis de frutos rojos.',       precios:{ small:'$12.000', medium:null, large:null, xlarge:null }, emoji:'🍰', imagen:'/images/placeholder-postre.jpg' },
+  { id:'brownie-helado',    nombre:'Brownie con Helado',      categoria:'Postres', desc:'Brownie melcochudo caliente acompañado de helado de vainilla.',        precios:{ small:'$10.500', medium:null, large:null, xlarge:null }, emoji:'🍦', imagen:'/images/placeholder-postre.jpg' },
+  { id:'merengon',          nombre:'Merengón de la Casa',     categoria:'Postres', desc:'Suspiro de merengue con crema chantilly y variedad de frutas.',        precios:{ small:'$14.000', medium:null, large:null, xlarge:null }, emoji:'☁️', imagen:'/images/placeholder-postre.jpg' },
+  { id:'tiramisu',          nombre:'Tiramisú Café',           categoria:'Postres', desc:'Postre italiano con capas de bizcocho café y mascarpone.',             precios:{ small:'$13.000', medium:null, large:null, xlarge:null }, emoji:'☕', imagen:'/images/placeholder-postre.jpg' },
+
+  // ─── ESPECIALIDADES CON FRESAS ──────────────────────────────
+  { id:'fresas-crema',      nombre:'Fresas con Crema',        categoria:'Fresas', desc:'Fresas seleccionadas con nuestra crema secreta artesanal.',             precios:{ small:'$9.000', medium:'$15.000', large:null, xlarge:null }, emoji:'🍓', imagen:'/images/placeholder-fresas.jpg' },
+  { id:'fresas-chocolate',  nombre:'Fresas Achocolatadas',    categoria:'Fresas', desc:'Fresas bañadas en chocolate semi-amargo y topping de nueces.',          precios:{ small:'$11.000', medium:'$18.000', large:null, xlarge:null }, emoji:'🍫', imagen:'/images/placeholder-fresas.jpg' },
+  { id:'copa-pecas',        nombre:'Copa Pecas y Fresas',     categoria:'Fresas', desc:'Mix de fresas, brownie picado, helado y lluvia de chocolate.',          precios:{ small:'$16.000', medium:null, large:null, xlarge:null }, emoji:'🍨', imagen:'/images/placeholder-fresas.jpg' },
+
+  // ─── BEBIDAS ──────────────────────────────────────────────────
+  { id:'cafe-latte',        nombre:'Café Latte',              categoria:'Bebidas', desc:'Expresso con leche cremosa.',                                          precios:{ small:'$5.500', medium:null, large:null, xlarge:null }, emoji:'☕', imagen:'/images/placeholder-bebida.jpg' },
+  { id:'jugo-natural',      nombre:'Jugos Naturales',         categoria:'Bebidas', desc:'Fruta 100% natural preparada al instante.',                            precios:{ small:'$7.000', medium:null, large:null, xlarge:null }, emoji:'🥤', imagen:'/images/placeholder-bebida.jpg', sabores: ['Fresa', 'Mora', 'Mango', 'Limonada Natural', 'Limonada de Coco'] },
+  { id:'malteada',          nombre:'Malteada Especial',       categoria:'Bebidas', desc:'Malteada espesa con crema chantilly y toppings.',                      precios:{ small:'$12.500', medium:null, large:null, xlarge:null }, emoji:'🥤', imagen:'/images/placeholder-bebida.jpg', sabores: ['Vainilla', 'Chocolate', 'Oreo', 'Fresa'] },
+];

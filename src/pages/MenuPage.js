@@ -1,29 +1,26 @@
 import { useState } from 'react';
-import { Link }     from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion'; // Importamos la magia
-import { pizzas }   from '../data/pizzas';
+import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { postres } from '../data/postres'; // Asumiendo que renombraste tu data
 import './MenuPage.css';
 
-const cats = ['Todas', 'Pizzas', 'Especiales', 'Hamburguesas', 'Perros', 'Asados', 'Bebidas'];
-
-const getMinPrice = (p) => p.precios.small;
-const hasSizes    = (p) => p.precios.medium !== null;
+const cats = ['Todos', 'Tortas', 'Postres', 'Fresas', 'Bebidas', 'Especiales'];
 
 export default function MenuPage() {
-  const [cat, setCat] = useState('Todas');
-  const filtered = cat === 'Todas' ? pizzas : pizzas.filter(p => p.categoria === cat);
+  const [cat, setCat] = useState('Todos');
+  const filtered = cat === 'Todos' ? postres : postres.filter(p => p.categoria === cat);
 
   return (
     <div className="menupage">
       <div className="menupage__header">
-        <span className="tag">- Carta completa</span>
-        <h1 className="section-title">Nuestro <em>Menu</em></h1>
-        <div className="divider-italy"><span/><span/><span/></div>
+        <span className="tag">- Dulce Tentación</span>
+        <h1 className="section-title">Nuestra <em>Carta</em></h1>
+        <div className="divider-brand"><span/><span/><span/></div>
       </div>
 
       <div className="menupage__layout">
         <aside className="menupage__filters">
-          <h3>Categorias</h3>
+          <h3>Categorías</h3>
           <ul>
             {cats.map(c => (
               <li key={c}>
@@ -38,21 +35,16 @@ export default function MenuPage() {
           </ul>
         </aside>
 
-        {/* AnimatePresence ayuda a que los elementos que salen lo hagan suavemente */}
-        <motion.div 
-          layout 
-          className="menupage__grid"
-        >
+        <motion.div layout className="menupage__grid">
           <AnimatePresence mode='popLayout'>
             {filtered.map((p) => (
               <motion.div
                 key={p.id}
-                layout // Esto hace que las tarjetas se muevan suavemente a su nueva posición
-                initial={{ opacity: 0, y: 20 }} // Empieza invisible y un poco abajo
-                whileInView={{ opacity: 1, y: 0 }} // Se hace visible al hacer scroll
-                exit={{ opacity: 0, scale: 0.9 }} // Al desaparecer se encoge y difumina
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
-                viewport={{ once: true }} // Solo se anima la primera vez que lo ves
               >
                 <Link to={`/menu/${p.id}`} className="menupage__card">
                   <div className="menupage__card-img">
@@ -66,10 +58,7 @@ export default function MenuPage() {
                     <h3>{p.nombre}</h3>
                     <p>{p.desc}</p>
                     <div className="menupage__price-wrap">
-                      {hasSizes(p) && (
-                        <span className="menupage__desde">desde </span>
-                      )}
-                      <span className="menupage__price">{getMinPrice(p)}</span>
+                      <span className="menupage__price">{p.precio || p.precios?.porcion}</span>
                     </div>
                   </div>
                 </Link>
