@@ -1,21 +1,23 @@
-// Menu.js
+// Menu.js — Gúrus Panadería
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { postres } from '../data/postres'; // Asumiendo que renombras tu data
+import { postres } from '../data/postres';
 import './Menu.css';
 
-const WA_BASE = 'https://wa.me/573057499947?text=Hola!%20Quiero%20pedir%20este%20postre:%20';
+const WA_BASE = 'https://wa.me/573173692416?text=Hola!%20Quiero%20pedir%20este%20producto:%20';
 
-const cats = ['Tortas', 'Galletas', 'Postres', 'Café', 'Bebidas', 'Especiales'];
+const cats = ['Pan', 'Tortas', 'Pastelería', 'Café', 'Bebidas'];
 
 const hasCustomization = (item) => item.personalizable === true;
 
-const getMinPrice = (item) => item.precio;
+const getMinPrice = (item) => {
+  if (item.precios.small) return item.precios.small;
+  return item.precio || 'Consultar';
+};
 
 export default function Menu() {
-  const [cat, setCat] = useState('Tortas');
+  const [cat, setCat] = useState('Pan');
 
-  // Filtrar por categoría y mostrar los primeros 8
   const currentItems = postres.filter(p => p.categoria === cat).slice(0, 8);
 
   const renderCard = (item, i) => {
@@ -38,7 +40,7 @@ export default function Menu() {
             </div>
             <p className="menu__card-desc">{item.desc}</p>
             <div className="menu__card-tag">Personalizable</div>
-            <div className="menu__card-cta">Ver opciones y encargar</div>
+            <div className="menu__card-cta">Ver opciones y pedir</div>
           </div>
         </Link>
       );
@@ -70,11 +72,11 @@ export default function Menu() {
   return (
     <section className="menu" id="menu">
       <div className="menu__header">
-        <span className="tag">- Nuestra vitrina</span>
+        <span className="tag">— Nuestra vitrina</span>
         <h2 className="section-title">Nuestra <em>Carta</em></h2>
-        <div className="divider-pastry"><span /><span /><span /></div>
+        <div className="divider-brand"><span /><span /><span /></div>
         <p className="section-sub" style={{ margin: '0 auto', textAlign: 'center' }}>
-          Repostería 100% artesanal, ingredientes premium y el toque dulce que te enamora.
+          Pan recién horneado, tortas con alma y café auténtico. Todo hecho a mano.
         </p>
       </div>
 

@@ -1,7 +1,26 @@
 .arma {
   padding: 8rem 5% 5rem;
-  background: #fff9fa;
+  background: linear-gradient(135deg, #f5ede3 0%, #fff 50%, #f7f0ec 100%);
   min-height: 100vh;
+  position: relative;
+}
+
+/* Disclaimer de plantilla */
+.arma__disclaimer {
+  background: rgba(139, 26, 92, 0.06);
+  border: 1.5px solid rgba(139, 26, 92, 0.2);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  margin: 0 auto 2rem;
+  max-width: 700px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #5a2145;
+}
+
+.arma__disclaimer strong {
+  color: #8B1A5C;
+  font-weight: 700;
 }
 
 .arma__header {
@@ -185,48 +204,68 @@
 
 /* 1. Forzar color de los títulos que no se ven */
 .arma .section-title {
-  color: #a71d2a !important; /* Rojo oscuro para que resalte */
+  color: #5a2145 !important;
   font-size: clamp(2.5rem, 6vw, 4rem);
   opacity: 1 !important;
   visibility: visible !important;
+  font-weight: 700;
+}
+
+.arma .section-title em {
+  color: #8B1A5C !important;
+  font-style: italic;
 }
 
 .arma .tag {
-  color: #d63384 !important; /* Rosa fuerte para el subtítulo */
+  color: #D4A853 !important;
   font-weight: 700;
 }
 
 /* 2. Ajustar el espaciado superior para que el Navbar no lo tape */
 .arma {
-  padding: 10rem 5% 5rem; /* Aumenté de 8rem a 10rem */
-  background: #fff9fa;
+  padding: 10rem 5% 5rem;
   min-height: 100vh;
 }
 
 /* 3. Arreglar los textos de los postres en la lista */
 .arma__pizza-nombre {
-  color: #444 !important; /* Gris oscuro casi negro */
+  color: #2c1628 !important;
   font-weight: 700;
 }
 
 .arma__pizza-precio {
-  color: #ff69b4 !important; /* Rosa para el "Agregar a la caja" */
+  color: #8B1A5C !important;
+  font-weight: 600;
 }
 
 /* 4. Arreglar el resumen (Seleccionados y Consultar) */
 .arma__summary-label {
-  color: #666 !important;
+  color: #5a2145 !important;
+  font-weight: 600;
 }
 
 .arma__summary-val, 
 .arma__summary-precio {
-  color: #d63384 !important;
+  color: #8B1A5C !important;
   font-weight: 800;
 }
 
 /* 5. El botón de volver */
 .arma__back {
-  color: #888 !important;
+  color: #5a2145 !important;
   text-decoration: none;
   font-weight: 600;
+}
+
+.arma__back:hover {
+  color: #8B1A5C !important;
+}
+
+/* 6. Título de secciones */
+.arma__section-title {
+  color: #2c1628 !important;
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  display: block;
 }

@@ -1,8 +1,4 @@
-/* historia.css */
-
-/* =========================================
-   HISTORIA - ADAPTACIÓN PECAS Y FRESAS
-   ========================================= */
+/* Historia.css — Gúrus Panadería */
 
 .hist {
   padding: 8rem 5%;
@@ -14,21 +10,19 @@
   position: relative;
 }
 
-/* 1. COLUMNA DE IMÁGENES */
 .hist__img-col {
   position: relative;
   display: block; 
   width: 100%;
 }
 
-/* Imagen Principal */
 .hist__img-main {
   width: 90%; 
   aspect-ratio: 4/5;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(212, 168, 83, 0.15);
 }
 
 .hist__img-main img {
@@ -37,7 +31,6 @@
   object-fit: cover; 
 }
 
-/* El Logo Circular (Basado en la estética de la marca) */
 .hist__img-sec {
   position: absolute;
   bottom: -20px; 
@@ -45,11 +38,41 @@
   width: 180px;  
   height: 180px; 
   z-index: 5;
-  background: white; /* El logo de Pecas y Fresas resalta mejor sobre blanco */
+  background: var(--primary);
   border: 8px solid var(--black); 
-  border-radius: 50%; /* Cambiado a circular para hacer match con el logo real */
+  border-radius: 50%;
   overflow: hidden;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 15px 30px rgba(139, 26, 92, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* Placeholder del logo — elimina esto cuando tengas el logo real */
+.hist__logo-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hist__logo-g {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 800;
+  font-style: italic;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.hist__logo-text {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--white);
 }
 
 .hist__img-sec img {
@@ -59,26 +82,26 @@
   padding: 15px;       
 }
 
-/* El Badge (Color rojo fresa) */
 .hist__years {
   position: absolute;
   top: 30px;
   left: -25px; 
-  background: #dc3545; /* Rojo vibrante de las fresas */
+  background: var(--primary);
   padding: 1.2rem 1rem;
   border-radius: 12px;
   text-align: center;
   z-index: 10;
-  box-shadow: 10px 10px 30px rgba(220, 53, 69, 0.3);
+  box-shadow: 10px 10px 30px var(--primary-glow);
   animation: float 4s ease-in-out infinite;
   height: auto; 
+  border: 2px solid var(--gold);
 }
 
 .hist__years-num {
   font-family: var(--font-display);
   font-size: 2.2rem;
   font-weight: 800;
-  color: white;
+  color: var(--gold);
   line-height: 1;
 }
 
@@ -91,7 +114,6 @@
   display: block;
 }
 
-/* 2. PILARES DE LA DERECHA */
 .hist__pillars {
   display: flex;
   flex-direction: column;
@@ -112,7 +134,7 @@
 
 .hist__pillar:hover {
   transform: translateX(10px);
-  border-color: #dc3545; /* Rojo fresa al hacer hover */
+  border-color: var(--gold);
   background: rgba(255, 255, 255, 0.06);
 }
 
@@ -128,8 +150,8 @@
 .hist__pillar-title {
   font-family: var(--font-display);
   font-size: 1rem;
+  font-weight: 700;
   color: white;
-  text-transform: uppercase;
   margin-bottom: 2px;
 }
 
@@ -138,20 +160,20 @@
   color: var(--muted);
 }
 
-/* Ajuste del color verde en el título */
-.hist__content .green {
-  color: #a8d5ba; /* Un verde pastel/menta más acorde a "Café & Vivero" */
+.hist__content .accent {
+  color: var(--rose);
+  font-style: italic;
 }
 
-/* Animación de flotado */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
 
-/* Ajuste móvil */
 @media (max-width: 900px) {
   .hist { grid-template-columns: 1fr; gap: 4rem; }
   .hist__img-col { max-width: 400px; margin: 0 auto; }
   .hist__img-sec { width: 140px; height: 140px; right: -10px; }
+  .hist__logo-g { font-size: 2.5rem; }
+  .hist__logo-text { font-size: 0.7rem; }
 }

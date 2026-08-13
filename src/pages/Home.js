@@ -1,29 +1,33 @@
 import Hero from '../components/Hero';
 import Historia from '../components/Historia';
-import Menu from '../components/Menu';       // Muestra los postres destacados (8 items)
+import Menu from '../components/Menu';
 import Galeria from '../components/Galeria';
+import Sedes from '../components/Sedes';
 import Testimonios from '../components/Testimonios';
-import Pedido from '../components/Pedido';     // CTA para pedidos personalizados o eventos
+import Pedido from '../components/Pedido';
 
 export default function Home() {
   return (
     <main className="home-container">
-      {/* Sección principal con impacto visual de los postres */}
+      {/* Hero principal con mensaje de Gúrus */}
       <Hero />
       
-      {/* Relato sobre la tradición artesanal de Pecas y Fresas */}
+      {/* Tradición y esencia de la panadería */}
       <Historia />
       
-      {/* Vista previa de la carta: Tortas, fresas y postres destacados */}
+      {/* Productos destacados: pan, tortas, café */}
       <Menu />
       
-      {/* Muestra visual de las mejores creaciones */}
+      {/* Galería visual de productos */}
       <Galeria />
       
-      {/* Lo que dicen los clientes sobre el sabor y frescura */}
+      {/* Nuestras 5 sedes en Bogotá */}
+      <Sedes />
+      
+      {/* Testimonios de clientes */}
       <Testimonios />
       
-      {/* Bloque final para incentivar el pedido por WhatsApp o reservas */}
+      {/* CTA para pedidos */}
       <Pedido />
     </main>
   );

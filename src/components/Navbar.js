@@ -1,16 +1,16 @@
-// Navbar.js
+// Navbar.js — Gúrus Panadería
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-const WA = 'https://wa.me/573057499947?text=Hola!%20Quiero%20hacer%20un%20pedido%20a%20Pecas%20y%20Fresas%20';
+const WA = 'https://wa.me/573173692416?text=Hola!%20Quiero%20hacer%20un%20pedido%20a%20G%C3%BArus%20Panader%C3%ADa%20';
 
 const links = [
-  { label: 'Inicio',   href: '/#inicio',     isRoute: false },
-  { label: 'Historia', href: '/#historia',    isRoute: false },
-  { label: 'Menú',     href: '/menu',          isRoute: true  },
-  { label: 'Galería',  href: '/#galeria',      isRoute: false },
-  { label: 'Sedes',    href: '/#sedes',        isRoute: false },
+  { label: 'Inicio',    href: '/#inicio',    isRoute: false },
+  { label: 'Nosotros',  href: '/#historia',  isRoute: false },
+  { label: 'Carta',     href: '/menu',        isRoute: true  },
+  { label: 'Galería',   href: '/#galeria',    isRoute: false },
+  { label: 'Sedes',     href: '/#sedes',      isRoute: false },
 ];
 
 export default function Navbar() {
@@ -23,30 +23,23 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', fn);
   }, []);
 
-  const logoUrl = "https://images.rappi.com/restaurants_logo/logo-1739639838607.png?e=webp&d=10x10&q=10";
-
   return (
     <nav className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
-      {/* Detalle visual de colores de marca */}
       <div className="nav__branding-line">
-        <span className="bl-pink" /><span className="bl-white" /><span className="bl-red" />
+        <span className="bl-primary" /><span className="bl-rose" /><span className="bl-gold" />
       </div>
 
       <div className="nav__left">
         <Link to="/" className="nav__logo" onClick={() => setOpen(false)}>
-          <img 
-            src={logoUrl} 
-            alt="Logo Pecas y Fresas" 
-            className="nav__logo-img" 
-            style={{ borderRadius: '50%' }} 
-          />
+          {/* Placeholder de logo — reemplaza con <img src="..." /> cuando tengas el archivo */}
+          <div className="nav__logo-placeholder">G</div>
           <div>
-            <span className="nav__logo-main">PECAS Y FRESAS</span>
-            <span className="nav__logo-sub">Pastelería Artesanal</span>
+            <span className="nav__logo-main">GÚRUS</span>
+            <span className="nav__logo-sub">Panadería</span>
           </div>
         </Link>
         <Link to="/armatucaja" className="nav__custom-btn">
-          🍰 Arma tu caja
+          🥐 Arma tu caja
         </Link>
       </div>
 
@@ -54,7 +47,7 @@ export default function Navbar() {
         
         <li className="nav__mobile-custom">
           <Link to="/armatucaja" className="btn-red" onClick={() => setOpen(false)}>
-            🍰 Arma tu caja
+            🥐 Arma tu caja
           </Link>
         </li>
 
@@ -81,7 +74,7 @@ export default function Navbar() {
       <button
         className={`nav__burger ${open ? 'open' : ''}`}
         onClick={() => setOpen(!open)}
-        aria-label="menu"
+        aria-label="Abrir menú"
       >
         <span /><span /><span />
       </button>

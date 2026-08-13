@@ -1,4 +1,4 @@
-/* Navbar.css */
+/* Navbar.css — Gúrus Panadería */
 
 .nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
@@ -8,10 +8,10 @@
 }
 
 .nav--scrolled {
-  background: rgba(15, 15, 15, 0.98);
+  background: rgba(18, 8, 16, 0.97);
   backdrop-filter: blur(16px);
   padding: 0.9rem 5%;
-  border-bottom: 1px solid rgba(220, 53, 69, 0.2);
+  border-bottom: 1px solid rgba(139, 26, 92, 0.25);
 }
 
 /* Línea de marca superior */
@@ -19,9 +19,9 @@
   position: absolute; top: 0; left: 0; right: 0;
   height: 3px; display: flex;
 }
-.bl-pink { flex:1; background: #f8c8dc; }
-.bl-white { flex:1; background: #ffffff; }
-.bl-red { flex:1; background: #dc3545; }
+.bl-primary { flex:1; background: var(--primary); }
+.bl-rose    { flex:1; background: var(--rose); }
+.bl-gold    { flex:1; background: var(--gold); }
 
 .nav__left {
   display: flex;
@@ -30,8 +30,26 @@
 }
 
 .nav__logo {
-  display: flex; align-items: center; gap: 0.6rem;
+  display: flex; align-items: center; gap: 0.75rem;
   text-decoration: none;
+}
+
+/* Placeholder circular — se reemplaza con <img> cuando llegue el logo */
+.nav__logo-placeholder {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 2px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 800;
+  font-style: italic;
+  color: var(--gold);
+  flex-shrink: 0;
 }
 
 .nav__logo-img {
@@ -39,45 +57,44 @@
   height: 48px;
   object-fit: contain;
   border-radius: 50%;
-  background: white; /* Resalta el logo circular */
-  padding: 2px;
 }
 
 .nav__logo-main {
   font-family: var(--font-display);
-  font-size: 1.2rem; font-weight: 700;
-  color: var(--white); letter-spacing: 0.05em;
+  font-size: 1.3rem; font-weight: 800;
+  font-style: italic;
+  color: var(--white); letter-spacing: 0.02em;
   display: block; line-height: 1;
 }
 
 .nav__logo-sub {
-  font-size: 0.55rem; letter-spacing: 0.15em;
-  text-transform: uppercase; color: #dc3545;
+  font-size: 0.55rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--gold);
   display: block;
-  margin-top: 2px;
+  margin-top: 3px;
 }
 
-/* Botón Personalizar Torta */
+/* Botón Arma tu caja */
 .nav__custom-btn {
-  font-family: var(--font-display);
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--white);
-  background: #dc3545;
+  background: var(--primary);
   text-decoration: none;
   padding: 0.5rem 1.2rem;
   border-radius: 999px;
   white-space: nowrap;
-  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
+  box-shadow: 0 4px 15px var(--primary-glow);
   transition: all 0.3s ease;
 }
 
 .nav__custom-btn:hover {
-  background: #bb2d3b;
+  background: var(--primary2);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(220, 53, 69, 0.4);
+  box-shadow: 0 6px 20px rgba(139, 26, 92, 0.45);
 }
 
 .nav__links {
@@ -87,9 +104,9 @@
 
 .nav__link {
   font-family: var(--font-body);
-  font-size: 0.72rem; font-weight: 500;
-  letter-spacing: 0.12em; text-transform: uppercase;
-  color: rgba(255,255,255,0.8); text-decoration: none;
+  font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(255,255,255,0.75); text-decoration: none;
   position: relative; transition: color 0.2s;
 }
 
@@ -97,22 +114,15 @@
   content: '';
   position: absolute; bottom: -4px; left: 0;
   width: 0; height: 2px;
-  background: #dc3545; transition: width 0.3s ease;
+  background: var(--gold); transition: width 0.3s ease;
 }
 
 .nav__link:hover { color: var(--white); }
 .nav__link:hover::after { width: 100%; }
 
 .nav__cta { 
-    font-size: 0.72rem; 
-    padding: 0.6rem 1.3rem;
-    background: transparent;
-    border: 1px solid #dc3545;
-    color: white;
-}
-
-.nav__cta:hover {
-    background: #dc3545;
+  font-size: 0.72rem; 
+  padding: 0.6rem 1.3rem;
 }
 
 .nav__burger {
@@ -149,13 +159,13 @@
     height: 100vh;
     width: 80%;
     max-width: 300px;
-    background: #111;
+    background: var(--dark);
     flex-direction: column;
     justify-content: center;
     padding: 2rem;
     transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     box-shadow: -10px 0 30px rgba(0,0,0,0.5);
-    border-left: 1px solid rgba(220, 53, 69, 0.3);
+    border-left: 1px solid rgba(139, 26, 92, 0.3);
   }
 
   .nav__links--open {

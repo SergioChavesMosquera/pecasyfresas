@@ -58,7 +58,7 @@ export default function ArmaTuCaja() {
   const [selectedItems, setSelectedItems] = useState([]);
   const [search, setSearch] = useState('');
 
-  const WA_NUMBER = '573057499947';
+  const WA_NUMBER = '573173692416';
 
   const filteredItems = postres.filter(p => 
     p.nombre.toLowerCase().includes(search.toLowerCase())
@@ -75,12 +75,17 @@ export default function ArmaTuCaja() {
 
   const buildWA = () => {
     const itemsList = selectedItems.map(i => i.nombre).join(', ');
-    const msg = `¡Hola Pecas y Fresas! 🍓\nQuiero armar mi caja:\n- Tamaño: ${size}\n- Contenido: ${itemsList}`;
+    const msg = `¡Hola Gúrus Panadería! 🥐\nQuiero armar mi caja:\n- Tamaño: ${size}\n- Contenido: ${itemsList}`;
     return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
   };
 
   return (
     <div className="arma">
+      {/* Disclaimer de plantilla */}
+      <div className="arma__disclaimer">
+        ℹ️ <strong>Nota:</strong> Esta es una plantilla demo. Algunas funcionalidades pueden estar en desarrollo.
+      </div>
+
       <div className="arma__header">
         <Link to="/" className="arma__back">← Volver</Link>
         <span className="tag">— Personaliza tu antojo</span>

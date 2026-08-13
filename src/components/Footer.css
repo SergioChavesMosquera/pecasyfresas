@@ -1,18 +1,19 @@
+/* Footer.css — Gúrus Panadería */
+
 .footer { 
-  background: #1a1a1a; /* Un gris muy oscuro, casi negro, para que resalten los rosados */
+  background: #1a0d14;
   padding: 5rem 5% 2rem; 
   position: relative; 
   overflow: hidden; 
 }
 
-/* Barra de acento superior sutil en lugar de la tricolor */
 .footer__accent-bar { 
   height: 4px; 
   position: absolute; 
   top: 0; 
   left: 0; 
   right: 0; 
-  background: linear-gradient(90deg, #ff69b4, #ffb6c1); /* Degradado rosa */
+  background: linear-gradient(90deg, var(--primary), var(--rose), var(--gold));
 }
 
 .footer__top { 
@@ -27,9 +28,10 @@
 .footer__logo { 
   font-family: var(--font-display); 
   font-size: 1.8rem; 
-  font-weight: 700; 
-  color: #ff69b4; /* Rosa característico */
-  letter-spacing: 0.05em; 
+  font-weight: 800; 
+  font-style: italic;
+  color: var(--rose); 
+  letter-spacing: 0.02em; 
   margin-bottom: 0.75rem; 
 }
 
@@ -54,13 +56,28 @@
   text-decoration: none;
 }
 
+.footer__ig {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+}
+
+.footer__ig a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer__ig a:hover {
+  color: var(--gold-light);
+}
+
 .footer__col h4 { 
   font-family: var(--font-display); 
   font-size: 0.75rem; 
-  font-weight: 600; 
+  font-weight: 700; 
   letter-spacing: 0.2em; 
   text-transform: uppercase; 
-  color: #ffb6c1; /* Rosa claro para los títulos */
+  color: var(--rose-light); 
   margin-bottom: 1.1rem; 
 }
 
@@ -79,7 +96,7 @@
 }
 
 .footer__col ul li a:hover { 
-  color: #ff69b4; 
+  color: var(--rose); 
 }
 
 .footer__bottom { 
@@ -93,7 +110,7 @@
 }
 
 .footer__credit { 
-  color: #ffb6c1; 
+  color: var(--gold); 
   opacity: 0.8; 
 }
 

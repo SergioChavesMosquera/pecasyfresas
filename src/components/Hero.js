@@ -1,9 +1,8 @@
-// hero.js
+// Hero.js — Gúrus Panadería
 import { Link } from 'react-router-dom';
 import './Hero.css';
 
-// Número de teléfono actualizado al de Pecas y Fresas y mensaje personalizado
-const WA = 'https://wa.me/573057499947?text=Hola!%20Quiero%20hacer%20un%20pedido%20a%20Pecas%20y%20Fresas%20';
+const WA = 'https://wa.me/573173692416?text=Hola!%20Quiero%20hacer%20un%20pedido%20a%20G%C3%BArus%20Panader%C3%ADa%20';
 
 export default function Hero() {
   return (
@@ -16,21 +15,20 @@ export default function Hero() {
 
       <div className="hero__content">
         <div className="hero__badge au d1">
-          <span className="hero__badge-flag">🍓</span>
-          Pastelería Artesanal & Café
+          <span className="hero__badge-flag">🥐</span>
+          Panadería & Pastelería Artesanal
         </div>
 
         <h1 className="hero__title au d2">
-          Un rincón<br />
-          que <em>enamora</em><br />
-          {/* Mantuve la clase original, pero adapté el texto al contexto de Bogotá */}
-          <span className="hero__title-green">en Bogotá</span>
+          Horneamos<br />
+          <em>sonrisas</em><br />
+          <span className="hero__title-accent">en Bogotá</span>
         </h1>
 
         <p className="hero__sub au d3">
-          Pecas y Fresas - sabor auténtico, repostería tradicional <br />
-          y espacios mágicos muy instagrameables. <br />
-          <span>Visítanos en nuestras sedes o pide a domicilio.</span>
+          Pan recién horneado, tortas con alma y café de verdad. <br />
+          Gúrus es tu rincón favorito desde las 6 de la mañana. <br />
+          <span>5 sedes en Bogotá — domicilios disponibles.</span>
         </p>
         
         <div className="hero__actions au d4">
@@ -43,17 +41,16 @@ export default function Hero() {
             Hacer un pedido
           </a>
           <Link to="/menu" className="btn-outline-white">
-            Ver el menú
+            Ver la carta
           </Link>
         </div>
 
         <div className="hero__stats au d5">
-          {/* Estadísticas actualizadas con base en el perfil de Instagram */}
           {[
-            ['40K+', 'Comunidad'],
-            ['4.1', 'Calificación'],
-            ['3', 'Sedes en Bogotá'],
-            ['100%', 'Artesanal']
+            ['5', 'Sedes'],
+            ['6am', 'Abrimos'],
+            ['100%', 'Artesanal'],
+            ['∞', 'Sabor']
           ].map(([num, label]) => (
             <div className="hero__stat" key={label}>
               <span className="hero__stat-num">{num}</span>
@@ -64,13 +61,11 @@ export default function Hero() {
       </div>
 
       <div className="hero__visual au d3">
-        {/* Actualizada la ruta y el alt text de la imagen */}
         <img 
-  src="https://www.bettycrocker.lat/wp-content/uploads/2023/04/Strawberry-Frosted-Layer-Cake.jpg"
- 
-  alt="Postres artesanales y café en Pecas y Fresas" 
-  className="hero__main-img" 
-/>
+          src="https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg"
+          alt="Pan artesanal Gúrus Panadería" 
+          className="hero__main-img" 
+        />
       </div>
     </section>
   );

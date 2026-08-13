@@ -1,43 +1,48 @@
-/* app.css */
+/* app.css — Gúrus Panadería */
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Barlow:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Fondo y Superficies (Mantenemos el estilo Dark Elegante) */
-  --black:    #0a0a0a;
-  --dark:     #111111;
-  --surface:  #1a1a1a;
-  --card:     #222222;
+  /* Fondos */
+  --black:    #120810;
+  --dark:     #1a0d14;
+  --surface:  #231120;
+  --card:     #2c1628;
   --border:   rgba(255,255,255,0.08);
 
-  /* Identidad: Rojo Fresa y Rosas */
-  --red:      #dc3545; /* Strawberry Red */
-  --red2:     #ff4d5e;
-  --red-glow: rgba(220, 53, 69, 0.25);
-  --pink:     #f8c8dc; /* Pastel Pink */
+  /* Identidad Gúrus — extraída del Instagram y horarios */
+  --primary:      #8B1A5C;   /* Ciruela profundo — color dominante */
+  --primary2:     #A3256E;   /* Ciruela más vivo */
+  --primary-glow: rgba(139, 26, 92, 0.3);
+  --rose:         #C4507A;   /* Rosa frambuesa */
+  --rose-light:   #E8A0B8;   /* Rosa claro */
+  --gold:         #D4A853;   /* Dorado cálido del logo */
+  --gold-light:   #EDD49A;   /* Dorado suave */
 
-  /* Identidad: Verde Menta / Vivero */
-  --green:    #89b49a; /* Sage Green */
-  --green2:   #a8d5ba; /* Mint Green */
-  --green-glow: rgba(168, 213, 186, 0.25);
+  /* Mapeo semántico (reemplaza las variables viejas en componentes) */
+  --red:      var(--primary);
+  --red2:     var(--primary2);
+  --red-glow: var(--primary-glow);
+  --pink:     var(--rose-light);
+  --green:    var(--gold);
+  --green2:   var(--gold-light);
+  --green-glow: rgba(212, 168, 83, 0.2);
 
   /* Neutros */
-  --white:    #f8f6f2;
-  --cream:    #ede8df;
-  --muted:    #999;
-  --gold:     #d4af37;
+  --white:  #f7f0ec;
+  --cream:  #f0e6dc;
+  --muted:  #9b8a8f;
+  --wa:     #25D366;
 
-  /* Tipografía */
-  --font-display: 'Oswald', sans-serif;
-  --font-serif:   'Merriweather', serif;
-  --font-body:    'Barlow', sans-serif;
+  /* Tipografía — suave y moderna */
+  --font-display: 'Poppins', sans-serif;
+  --font-serif:   'Inter', sans-serif;
+  --font-body:    'Inter', sans-serif;
 
   --shadow:    0 4px 24px rgba(0,0,0,0.5);
   --shadow-lg: 0 12px 48px rgba(0,0,0,0.7);
-  --radius:    4px;
+  --radius:    8px;
   --transition: 0.35s cubic-bezier(0.25,0.46,0.45,0.94);
-
-  --wa: #25D366;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -47,27 +52,27 @@ body {
   background: var(--black);
   color: var(--white);
   font-family: var(--font-body);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.65;
   overflow-x: hidden;
 }
 
-::selection { background: var(--red); color: var(--white); }
+::selection { background: var(--primary); color: var(--white); }
 
 /* Scrollbar personalizado */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--dark); }
-::-webkit-scrollbar-thumb { background: var(--red); border-radius: 2px; }
+::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 2px; }
 
 /* --- Utilidades de Marca --- */
 
 .tag {
   font-family: var(--font-body);
   font-size: 0.65rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--red);
+  color: var(--gold);
   display: block;
   margin-bottom: 0.5rem;
 }
@@ -77,30 +82,29 @@ body {
   font-size: clamp(2.4rem, 5vw, 4rem);
   font-weight: 700;
   color: var(--white);
-  line-height: 1.05;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 .section-title em {
-  font-style: normal;
-  color: var(--red);
+  font-style: italic;
+  color: var(--rose);
 }
 
 .section-title .green { 
-  color: var(--green2); 
+  color: var(--gold-light); 
 }
 
 .section-sub {
   font-family: var(--font-serif);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 400;
   color: var(--muted);
   line-height: 1.85;
   max-width: 520px;
 }
 
-/* Divisor con los colores de Pecas y Fresas */
+/* Divisor con los colores de Gúrus */
 .divider-brand {
   display: flex;
   gap: 0;
@@ -110,9 +114,23 @@ body {
   overflow: hidden;
   border-radius: 2px;
 }
-.divider-brand span:nth-child(1) { flex:1; background: var(--green2); } /* Menta */
-.divider-brand span:nth-child(2) { flex:1; background: var(--pink); }   /* Rosa */
-.divider-brand span:nth-child(3) { flex:1; background: var(--red); }    /* Fresa */
+.divider-brand span:nth-child(1) { flex:1; background: var(--primary); }
+.divider-brand span:nth-child(2) { flex:1; background: var(--rose); }
+.divider-brand span:nth-child(3) { flex:1; background: var(--gold); }
+
+/* Alias para los dividers que usan la clase pastry */
+.divider-pastry {
+  display: flex;
+  gap: 0;
+  height: 3px;
+  width: 90px;
+  margin: 1.25rem 0;
+  overflow: hidden;
+  border-radius: 2px;
+}
+.divider-pastry span:nth-child(1) { flex:1; background: var(--primary); }
+.divider-pastry span:nth-child(2) { flex:1; background: var(--rose); }
+.divider-pastry span:nth-child(3) { flex:1; background: var(--gold); }
 
 /* --- Botones --- */
 
@@ -122,13 +140,13 @@ body {
   gap: 0.6rem;
   background: var(--wa);
   color: var(--white);
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   padding: 0.9rem 2.2rem;
-  border-radius: var(--radius);
+  border-radius: 999px;
   text-decoration: none;
   border: none;
   cursor: pointer;
@@ -146,26 +164,50 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  background: var(--red);
+  background: var(--primary);
   color: var(--white);
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   padding: 0.9rem 2.2rem;
-  border-radius: var(--radius);
+  border-radius: 999px;
   text-decoration: none;
   border: none;
   cursor: pointer;
-  box-shadow: 0 4px 20px var(--red-glow);
+  box-shadow: 0 4px 20px var(--primary-glow);
   transition: all var(--transition);
 }
 
 .btn-red:hover {
-  background: var(--red2);
+  background: var(--primary2);
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(220, 53, 69, 0.45);
+  box-shadow: 0 8px 28px rgba(139, 26, 92, 0.45);
+}
+
+.btn-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--primary);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.9rem 2.2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.btn-brand:hover {
+  background: var(--primary2);
+  transform: translateY(-2px);
 }
 
 .btn-outline-white {
@@ -174,23 +216,23 @@ body {
   gap: 0.5rem;
   background: transparent;
   color: var(--white);
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   padding: 0.85rem 1.8rem;
-  border-radius: var(--radius);
-  border: 1.5px solid rgba(255,255,255,0.3);
+  border-radius: 999px;
+  border: 1.5px solid rgba(255,255,255,0.35);
   text-decoration: none;
   cursor: pointer;
   transition: all var(--transition);
 }
 
 .btn-outline-white:hover {
-  border-color: var(--pink);
-  color: var(--pink);
-  background: rgba(248, 200, 220, 0.05);
+  border-color: var(--rose-light);
+  color: var(--rose-light);
+  background: rgba(196, 80, 122, 0.08);
 }
 
 /* --- Animaciones --- */
@@ -209,3 +251,5 @@ body {
 .d1  { animation-delay: 0.1s; }
 .d2  { animation-delay: 0.2s; }
 .d3  { animation-delay: 0.3s; }
+.d4  { animation-delay: 0.4s; }
+.d5  { animation-delay: 0.5s; }
